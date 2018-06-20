@@ -2,7 +2,6 @@ package MyTestCase;
 
 import java.io.IOException;
 import java.util.EmptyStackException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -11,17 +10,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 import BaseClass.Red_InvokeBrowser;
 import CommonClass.Home_Page;
 import ExecutionReport.Extent_Report;
 import ExecutionReport.ScreenShot;
 import PageClass.AdvancedSearch_Popup_Test;
-import PageClass.ClaimCompany_Popup_Test;
 import PageClass.ClaimPOP_UP_Test;
 import PageClass.Claim_Submit_Test;
 import PageClass.Contact_Test;
@@ -39,7 +35,7 @@ import PropertyClass.Property;
 	String browser;
 	String url;
 	Login_Test login;
-	ClaimCompany_Popup_Test claim;
+	ClaimPOP_UP_Test claim;
 	RateCompany_Popup_Test rest;
 	ScreenShot sc;
 	Financial_Snapshot_Popup_Test financialSnap;
