@@ -2,6 +2,7 @@ package MyTestCase;
 
 import java.io.IOException;
 import java.util.EmptyStackException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -21,6 +22,7 @@ import ExecutionReport.Extent_Report;
 import ExecutionReport.ScreenShot;
 import PageClass.AdvancedSearch_Popup_Test;
 import PageClass.ClaimCompany_Popup_Test;
+import PageClass.ClaimPOP_UP_Test;
 import PageClass.Claim_Submit_Test;
 import PageClass.Contact_Test;
 import PageClass.Endorsement_Test;
@@ -50,13 +52,14 @@ import PropertyClass.Property;
 	ExtentTest test;
 	ExtentReports report;
 	Home_Page Hommy;
+	ClaimPOP_UP_Test poppy;
 	
 	@BeforeClass
-	public void setUpClass() throws IOException, InterruptedException 
+	public void setUpClass() throws IOException ,InterruptedException 
 	{	 	  
 		 report=new ExtentReports("C:\\Test-OXYGEN\\RedBook\\report\\redbook.html",true);  
 		 test=report.startTest("RedBookTesting");
-		 test.log(LogStatus.INFO, "browser is invoked");
+		 test.log(LogStatus.INFO, "Browser is invoked");
 		 report.addSystemInfo("Project", "Redbook Automation");
 		 report.addSystemInfo("Environment", "DEV");
 		 report.addSystemInfo("Test Engineer", "Jyotiprakash"); 
@@ -69,8 +72,7 @@ import PropertyClass.Property;
 	   {	   
 		 driver=Red_InvokeBrowser.openBrowser(browser); 
 		 driver.get(url);
-		 login=new Login_Test(driver);
-		 claim=new ClaimCompany_Popup_Test(driver);
+		 login=new Login_Test(driver); 
 		 rest=new RateCompany_Popup_Test(driver,test);
 		 advanced=new AdvancedSearch_Popup_Test(driver,test);
 		 PIN=new ProduceIndex(driver);
@@ -82,7 +84,7 @@ import PropertyClass.Property;
 	 	 contact=new Contact_Test(driver);
 	  }
 	
-  @Test(priority=1)
+  @Test(enabled=false)
   public void checkLogin() throws IOException, InterruptedException 
   { 
 	  String un=Property.getData("DATA", "username");
@@ -90,19 +92,20 @@ import PropertyClass.Property;
 	  login.UserLogin(un, pwd);	  
 	  String title=login.ValidateTitle();
 	  Assert.assertEquals("Home | Produce Market Guide",title);
-	  test=report.startTest("Login Test");
-	  test.log(LogStatus.INFO, "Status of login Test");
+	  //test=report.startTest("Login Test");
+	  //test.log(LogStatus.INFO, "Status of Login Test");
   }
 
-  @Test(priority=2)
+  @Test(priority=1)
   public void CheckClaim() throws InterruptedException
   {
-	  claim.ClaimTest();
-	  test=report.startTest("Claim Company Test");
-	  test.log(LogStatus.INFO, "Status of Company Claim Functionality Test");
+	  poppy=new ClaimPOP_UP_Test(driver);
+	  poppy.ClaimTest();
+	  //test=report.startTest("Claim Company Test");
+	  //test.log(LogStatus.INFO, "Status of Company Claim Functionality Test");
   }
   
-  @Test(priority=3)
+  @Test(enabled=false)
   public void CheckRating() throws InterruptedException
   {
 	  rest.RateTest();
@@ -110,7 +113,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Rate This Company Functionality Test");
   }
   
-  @Test(priority=4)
+  @Test(enabled=false)
   public void CheckFinancialSnapshot() throws InterruptedException
   {
 	  financialSnap.FinancialTest();
@@ -118,7 +121,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Financial Snapshot Functionality Test");
   }
   
-  @Test(priority=5)
+  @Test(enabled=false)
   public void CheckAdvancedPopup() throws InterruptedException
   {
 	  advanced.AdvancedPopupTest();
@@ -126,7 +129,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Advanced Search Pop up Test");
   }
   
-  @Test(priority=6)
+  @Test(enabled=false)
    public void CheckContact() throws InterruptedException
    {
 	  contact.ContactTest();
@@ -134,7 +137,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Contacts Logged in and Looged out User Test");
    }
   
-  @Test(priority=9)
+  @Test(enabled=false)
   public void CheckProduce() throws InterruptedException
   {
 	 PIN.ProduceIndex_Test();
@@ -142,7 +145,7 @@ import PropertyClass.Property;
 	 test.log(LogStatus.INFO, "Status of Produce Index Test"); 
   }
   
-  @Test(priority=7)
+  @Test(enabled=false)
   public void CheckSubmit() throws InterruptedException
   {
 	  Submit.SubmitTest();
@@ -150,7 +153,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Claim Submit Test");
   }
   
-  @Test(priority=8)
+  @Test(enabled=false)
   public void CheckEndorse() throws InterruptedException
   {
 	  Endorse.EndroseTest();

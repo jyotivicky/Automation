@@ -37,9 +37,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 	  			File destination=new File(screenshotName);
 	  			
 	  			FileUtils.copyFile(scrFile, destination);
-	  			
-	  			//FileUtils.copyFile(scrFile, new File("C:\\Users\\VICKY\\Desktop\\TEST_SHOT\\"+1+".png"));
-	  			
+	  				  			
 	  			System.out.println("Screenshot Taken");
 	  			
 	  			return destFile;
