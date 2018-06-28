@@ -53,7 +53,7 @@ import CommonClass.HomeFunction;
 		    else
 		      {
 			   System.out.println("Claim Button is Present");
-			   System.out.println("testing done");
+			   System.out.println("testing done12345566");
 			   Click_Claim_Button.click();
 			   
 			   System.out.println("Claim Company is Working fine");
