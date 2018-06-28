@@ -17,11 +17,17 @@ import com.relevantcodes.extentreports.ExtentTest;
 	WebDriver driver;
 	boolean isPresent;
 	List<WebElement> links;
+	
 	@FindBy(xpath="//div[@id='popup-dialog-window']//span[@id='close-dialog']") WebElement Home_Pop_Up;
+	
 	@FindBy(xpath="//button[@class='menu-toggle']") WebElement Menu_Button;
+	
 	@FindBy(xpath="//a[text()='Produce Index']") WebElement Produce_Index;
+	
 	@FindBy(xpath="//div[div[div[div[span[a[text()='All']]]]]]/div[2]//a") WebElement All_Links;
+	
 	@FindBy(xpath="//a[text()='Find companies']") WebElement Find_Companies;
+	
 	int count=0;
 	int errorLinkCount;
 	ArrayList<String> errorLink=new ArrayList<String>();
@@ -34,7 +40,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 		PageFactory.initElements(driver, this);
 	}
 	
-  public void ProduceIndex_Test() throws InterruptedException 
+    public void ProduceIndex_Test() throws InterruptedException 
                {
 			    Thread.sleep(3000); 
 			    Home_Pop_Up.click();
@@ -44,8 +50,8 @@ import com.relevantcodes.extentreports.ExtentTest;
 			    driver.findElement(By.partialLinkText("Find Produce")).click();
 			    Thread.sleep(3000);
 			    Produce_Index.click();
+			    
 			    links=driver.findElements(By.xpath("//div[div[div[div[span[a[text()='All']]]]]]/div[2]//a"));
-			    //links=All_Links;
 		    	while(count<links.size()) 
 		    	{ 		
 		    		List<WebElement> alllLinks=driver.findElements(By.xpath("//div[div[div[div[span[a[text()='All']]]]]]/div[2]//a"));

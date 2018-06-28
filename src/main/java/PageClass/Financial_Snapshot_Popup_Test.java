@@ -33,7 +33,7 @@ public class Financial_Snapshot_Popup_Test
 	
 	@FindBy(xpath="//input[@id='edit-search-autocomplete']") WebElement ENTER_COMPANY;
 	
-	@FindBy(xpath="//a[@href='/company/108163/hronis-inc']") WebElement Click_Company;
+	@FindBy(xpath="//ul[@id='ui-id-1']//li[3]//a[1]//a") WebElement Click_Company;
 	
 	@FindBy(xpath="//div[@id='drupal-modal--body']//input[@name='pass']") WebElement PWD;
 	
@@ -52,18 +52,18 @@ public class Financial_Snapshot_Popup_Test
 	
 	public void FinancialTest() throws InterruptedException
 	{
-		  Thread.sleep(3000);
+		  Thread.sleep(2000);
 		  qf.Quick();
 		
 			ENTER_COMPANY.sendKeys("Hronis Inc");
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			Click_Company.click();
 			boolean b=driver.getPageSource().contains("View Snapshot");
 			System.out.println(b);
 			
 		Thread.sleep(3000);
         JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("window.scrollBy(0,350)", "");
+        jse.executeScript("window.scrollBy(0,400)", "");
 		Thread.sleep(3000);
         Financial.click();
         
@@ -91,7 +91,7 @@ public class Financial_Snapshot_Popup_Test
 		   
 		    Thread.sleep(2000);
 		    JavascriptExecutor jse1 = (JavascriptExecutor)driver;
-	        jse1.executeScript("window.scrollBy(0,350)", "");
+	        jse1.executeScript("window.scrollBy(0,400)", "");
 			Thread.sleep(3000);
 	        Financial.click();
 	       }

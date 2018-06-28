@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/8</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 20 15:43:00 IST 2018</td>
+<td>Started on:</td><td>Tue Jun 26 12:20:32 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28296 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2126 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,24 +68,21 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='MyTestCase.NewTest.CheckClaim()'><b>CheckClaim</b><br>Test class: MyTestCase.NewTest</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=67.0.3396.87)
-  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.12 seconds
+<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: session null does not exist (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2 milliseconds
 Build info: version: &apos;2.50.1&apos;, revision: &apos;d7fc91b29de65b790abb01f3ac5f7ea2191c88a7&apos;, time: &apos;2016-01-29 11:11:26&apos;
 System info: host: &apos;VICKY-PC&apos;, ip: &apos;169.254.201.190&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\VICKY\AppData\Local\Temp\scoped_dir10508_18900}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c758016d3fa45dfc785912d8022a41f0
-*** Element info: {Using=xpath, value=//div[@class=&apos;mn-wrp&apos;]//div//section//div//article//h1/small//div}
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{capabilities={proxy={}, acceptInsecureCerts=false, browserVersion=11, se:ieOptions={nativeEvents=true, browserAttachTimeout=0, ie.ensureCleanSession=false, elementScrollBehavior=0, enablePersistentHover=true, ie.browserCommandLineSwitches=, ie.forceCreateProcessApi=false, requireWindowFocus=false, initialBrowserUrl=http://localhost:37782/, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, ignoreProtectedModeSettings=false}, timeouts={implicit=0, pageLoad=300000, script=30000}, browserName=internet explorer, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss, platformName=windows, setWindowRect=true}, sessionId=e3208a12-33e1-4481-b1c8-7601c95e6257, platform=ANY}]
+Session ID: null
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -93,21 +90,18 @@ Session ID: c758016d3fa45dfc785912d8022a41f0
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at PageClass.ClaimPOP_UP_Test.ClaimTest(ClaimPOP_UP_Test.java:79)
-	at MyTestCase.NewTest.CheckClaim(NewTest.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:946)
+	at BaseClass.Red_InvokeBrowser.openBrowser(Red_InvokeBrowser.java:36)
+	at MyTestCase.NewTest.Setup(NewTest.java:85)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
@@ -126,17 +120,14 @@ Session ID: c758016d3fa45dfc785912d8022a41f0
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1801942731", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1801942731'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=67.0.3396.87)
-  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.12 seconds
+</pre></div><a href='#' onClick='toggleBox("stack-trace1470358122", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1470358122'><pre>org.openqa.selenium.WebDriverException: session null does not exist (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2 milliseconds
 Build info: version: &apos;2.50.1&apos;, revision: &apos;d7fc91b29de65b790abb01f3ac5f7ea2191c88a7&apos;, time: &apos;2016-01-29 11:11:26&apos;
 System info: host: &apos;VICKY-PC&apos;, ip: &apos;169.254.201.190&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\VICKY\AppData\Local\Temp\scoped_dir10508_18900}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c758016d3fa45dfc785912d8022a41f0
-*** Element info: {Using=xpath, value=//div[@class=&apos;mn-wrp&apos;]//div//section//div//article//h1/small//div}
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{capabilities={proxy={}, acceptInsecureCerts=false, browserVersion=11, se:ieOptions={nativeEvents=true, browserAttachTimeout=0, ie.ensureCleanSession=false, elementScrollBehavior=0, enablePersistentHover=true, ie.browserCommandLineSwitches=, ie.forceCreateProcessApi=false, requireWindowFocus=false, initialBrowserUrl=http://localhost:37782/, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, ignoreProtectedModeSettings=false}, timeouts={implicit=0, pageLoad=300000, script=30000}, browserName=internet explorer, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss, platformName=windows, setWindowRect=true}, sessionId=e3208a12-33e1-4481-b1c8-7601c95e6257, platform=ANY}]
+Session ID: null
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -144,21 +135,18 @@ Session ID: c758016d3fa45dfc785912d8022a41f0
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at PageClass.ClaimPOP_UP_Test.ClaimTest(ClaimPOP_UP_Test.java:79)
-	at MyTestCase.NewTest.CheckClaim(NewTest.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:946)
+	at BaseClass.Red_InvokeBrowser.openBrowser(Red_InvokeBrowser.java:36)
+	at MyTestCase.NewTest.Setup(NewTest.java:85)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
@@ -178,8 +166,144 @@ Session ID: c758016d3fa45dfc785912d8022a41f0
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>20</td>
-<td>MyTestCase.NewTest@47c62251</td></tr>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.tearDown()'><b>tearDown</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='MyTestCase.NewTest.CheckAdvancedPopup()'><b>CheckAdvancedPopup</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.CheckClaim()'><b>CheckClaim</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.CheckContact()'><b>CheckContact</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.CheckFinancialSnapshot()'><b>CheckFinancialSnapshot</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.CheckProduce()'><b>CheckProduce</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.CheckRating()'><b>CheckRating</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.CheckSubmit()'><b>CheckSubmit</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.checkLogin()'><b>checkLogin</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@6a41eaa2</td></tr>
 </table><p>
 </body>
 </html>

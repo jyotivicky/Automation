@@ -1,20 +1,35 @@
 package MyTestCase;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.EmptyStackException;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.gargoylesoftware.htmlunit.javascript.configuration.BrowserName;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import BaseClass.Red_InvokeBrowser;
+import CommonClass.ExcelData;
 import CommonClass.Home_Page;
+import CommonClass.ReadData;
+import CommonClass.WriteData;
 import ExecutionReport.Extent_Report;
 import ExecutionReport.ScreenShot;
 import PageClass.AdvancedSearch_Popup_Test;
@@ -49,6 +64,10 @@ import PropertyClass.Property;
 	ExtentReports report;
 	Home_Page Hommy;
 	ClaimPOP_UP_Test poppy;
+	ExcelData read;
+	WriteData sss;
+	
+	//@Parameters(browser)
 	
 	@BeforeClass
 	public void setUpClass() throws IOException ,InterruptedException 
@@ -59,6 +78,7 @@ import PropertyClass.Property;
 		 report.addSystemInfo("Project", "Redbook Automation");
 		 report.addSystemInfo("Environment", "DEV");
 		 report.addSystemInfo("Test Engineer", "Jyotiprakash"); 
+
 		 browser=Property.getData("DATA", "browserName");
 		 url=Property.getData("DATA", "url");
 	}
@@ -67,7 +87,7 @@ import PropertyClass.Property;
 	public void Setup() throws InterruptedException, IOException
 	   {	   
 		 driver=Red_InvokeBrowser.openBrowser(browser); 
-		 driver.get(url);
+		 driver.get(url); 
 		 login=new Login_Test(driver); 
 		 rest=new RateCompany_Popup_Test(driver,test);
 		 advanced=new AdvancedSearch_Popup_Test(driver,test);
@@ -78,9 +98,10 @@ import PropertyClass.Property;
 		 Submit=new Claim_Submit_Test(driver,test);
 		 sc=new ScreenShot(driver);
 	 	 contact=new Contact_Test(driver);
+	 	 read=new ExcelData(driver);
 	  }
 	
-  @Test(enabled=false)
+  @Test(priority=1)
   public void checkLogin() throws IOException, InterruptedException 
   { 
 	  String un=Property.getData("DATA", "username");
@@ -88,20 +109,20 @@ import PropertyClass.Property;
 	  login.UserLogin(un, pwd);	  
 	  String title=login.ValidateTitle();
 	  Assert.assertEquals("Home | Produce Market Guide",title);
-	  //test=report.startTest("Login Test");
-	  //test.log(LogStatus.INFO, "Status of Login Test");
+	  test=report.startTest("Login Test");
+	  test.log(LogStatus.INFO, "Status of Login Test");
   }
 
-  @Test(priority=1)
-  public void CheckClaim() throws InterruptedException
+  @Test(priority=2)
+  public void CheckClaim() throws IOException, Exception
   {
 	  poppy=new ClaimPOP_UP_Test(driver);
 	  poppy.ClaimTest();
-	  //test=report.startTest("Claim Company Test");
-	  //test.log(LogStatus.INFO, "Status of Company Claim Functionality Test");
+	  test=report.startTest("Claim Company Test");
+	  test.log(LogStatus.INFO, "Status of Company Claim Functionality Test");
   }
   
-  @Test(enabled=false)
+  @Test(priority=3)
   public void CheckRating() throws InterruptedException
   {
 	  rest.RateTest();
@@ -109,7 +130,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Rate This Company Functionality Test");
   }
   
-  @Test(enabled=false)
+  @Test(priority=4)
   public void CheckFinancialSnapshot() throws InterruptedException
   {
 	  financialSnap.FinancialTest();
@@ -117,7 +138,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Financial Snapshot Functionality Test");
   }
   
-  @Test(enabled=false)
+  @Test(priority=5)
   public void CheckAdvancedPopup() throws InterruptedException
   {
 	  advanced.AdvancedPopupTest();
@@ -125,7 +146,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Advanced Search Pop up Test");
   }
   
-  @Test(enabled=false)
+  @Test(priority=6)
    public void CheckContact() throws InterruptedException
    {
 	  contact.ContactTest();
@@ -133,7 +154,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Contacts Logged in and Looged out User Test");
    }
   
-  @Test(enabled=false)
+  @Test(priority=9)
   public void CheckProduce() throws InterruptedException
   {
 	 PIN.ProduceIndex_Test();
@@ -141,14 +162,14 @@ import PropertyClass.Property;
 	 test.log(LogStatus.INFO, "Status of Produce Index Test"); 
   }
   
-  @Test(enabled=false)
+  @Test(priority=7)
   public void CheckSubmit() throws InterruptedException
   {
 	  Submit.SubmitTest();
 	  test=report.startTest("Submit Test");
 	  test.log(LogStatus.INFO, "Status of Claim Submit Test");
   }
-  
+
   @Test(enabled=false)
   public void CheckEndorse() throws InterruptedException
   {
@@ -171,7 +192,11 @@ import PropertyClass.Property;
 	 }
 	 else if (result.getStatus()==result.FAILURE) 
 	 {
-		 test.log(LogStatus.FAIL, "Test Case Got Failed");	 
+		 test.log(LogStatus.FAIL, "Test Case Got Failed");
+		 
+		 String Path=ScreenShot.CaptureScreenshot(driver, "screenshotName");
+		 test.log(LogStatus.FAIL, result.getThrowable());
+         test.log(LogStatus.FAIL, "Snapshot below: " + test.addScreenCapture(Path));
 	}
 	 driver.quit();
     } 

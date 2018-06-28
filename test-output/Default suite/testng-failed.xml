@@ -10,11 +10,16 @@
     <classes>
       <class name="MyTestCase.NewTest">
         <methods>
+          <include name="CheckSubmit"/>
           <include name="setUpClass"/>
+          <include name="CheckAdvancedPopup"/>
+          <include name="CheckRating"/>
           <include name="Setup"/>
-          <include name="TestSucessfullReport"/>
-          <include name="tearDown"/>
+          <include name="CheckProduce"/>
+          <include name="CheckContact"/>
+          <include name="CheckFinancialSnapshot"/>
           <include name="CheckClaim"/>
+          <include name="checkLogin"/>
         </methods>
       </class> <!-- MyTestCase.NewTest -->
     </classes>

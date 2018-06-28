@@ -1,8 +1,28 @@
 package WaitClass;
 
-   public class Wait 
-  {
-   public static long Page_Load_Wait=20;
-   public static long Implicitly_Wait=20;
-   public static long Thread_Wait=20;
-  }
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+    public class Wait 
+    {
+	  WebDriver driver;
+	
+	   public static void Implicitly(WebDriver driver)
+	   {
+		   driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+	   }
+	   
+	   public static void Thread_Wait() throws InterruptedException
+	   {
+		   Thread.sleep(3000);
+	   }	   
+	   public static void Explicitly(WebDriver driver,String element)
+	   {
+		   WebDriverWait wait=new WebDriverWait(driver, 30);
+		   wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(element)));  
+	   }
+       }

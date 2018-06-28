@@ -70,7 +70,7 @@ import CommonClass.HomeFunction;
     
     public void ContactTest() throws InterruptedException
     {
-    	qf.Quick();
+    	HomeFunction.Quick();
 		ENTER_COMPANY.sendKeys("Lenz Family Farms LLC");
 		Thread.sleep(2000);
 		Company22.click();

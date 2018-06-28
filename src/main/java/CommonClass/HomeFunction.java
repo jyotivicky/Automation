@@ -23,17 +23,17 @@ import org.openqa.selenium.support.PageFactory;
     	PageFactory.initElements(driver, this);
 	}
 	
-	public static void Quick() throws InterruptedException
+	public static void Quick() throws InterruptedException 
 	{
 		Thread.sleep(2000);
     	Home_Popup.click();
 		Thread.sleep(2000);
-
     	int xCord=QUICKSEARCH.getLocation().x;
 		int yCord=QUICKSEARCH.getLocation().y;
 		Actions act=new Actions(driver);
 		Thread.sleep(2000);
 		act.moveToElement(QUICKSEARCH, xCord, yCord).perform();
+		
 		QUICKSEARCH.click();
 	}
    }

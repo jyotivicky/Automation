@@ -47,7 +47,7 @@ public class Claim_Submit_Test
 	
 	public void SubmitTest() throws InterruptedException
 	{
-		qf.Quick();
+		HomeFunction.Quick();
 		ENTER_COMPANY.sendKeys("Triple J Produce Inc");
 		Thread.sleep(2000);
 		Company.click();

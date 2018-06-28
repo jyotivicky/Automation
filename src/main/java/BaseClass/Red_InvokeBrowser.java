@@ -2,6 +2,7 @@ package BaseClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -17,7 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 	{
 		if(browserName.equals("FF")) 
 		{
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\VICKY\\Desktop\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver","C:\\Users\\VICKY\\Desktop\\geckodriver.exe");
 			driver=new FirefoxDriver();
 			driver.manage().window().maximize();
 		}
@@ -26,8 +27,14 @@ import org.openqa.selenium.support.PageFactory;
 			System.setProperty("webdriver.chrome.driver","C:\\Users\\VICKY\\Desktop\\chromedriver.exe");
 			driver = new ChromeDriver(); 
 			driver.manage().window().maximize();			
-		}
+		}	
 		
+		else if(browserName.equals("IE"))
+		{
+			System.setProperty("webdriver.ie.driver","C:\\Users\\VICKY\\Desktop\\IEDriverServer-64.exe");
+			driver = new InternetExplorerDriver();
+			driver.manage().window().maximize();
+		}
 		return driver;		
-	}
-    }
+	    }
+       }

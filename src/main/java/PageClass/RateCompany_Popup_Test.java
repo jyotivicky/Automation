@@ -18,8 +18,6 @@ import CommonClass.HomeFunction;
    public class RateCompany_Popup_Test 
   {
 	WebDriver driver;
-	
-	HomeFunction qf;
 	boolean isPresent;
 	ExtentTest test;
 	
@@ -33,7 +31,7 @@ import CommonClass.HomeFunction;
 	
 	@FindBy(xpath="//a[text()='Quick Search']")  WebElement QUICKSEARCH;
 	
-	@FindBy(xpath="//a[@href='/company/140256/awe-sum-organics-inc']") WebElement Click_Company;
+	@FindBy(xpath="//ul[@id='ui-id-1']//li[3]//a[1]//a") WebElement Click_Company;
 	
 	@FindBy(xpath="//input[@id='edit-search-autocomplete']") WebElement ENTER_COMPANY;
 	
@@ -85,13 +83,12 @@ import CommonClass.HomeFunction;
 	{
 		this.driver=driver;	
 		this.test=test;
-		qf=new HomeFunction(driver);
-		PageFactory.initElements(driver, this);
+        PageFactory.initElements(driver, this);
 	}
 	
 	public void RateTest() throws InterruptedException
 	      {		
-		    qf.Quick();
+		    HomeFunction.Quick();
 			ENTER_COMPANY.sendKeys("Awe Sum Organics Inc");
             Thread.sleep(2000);
 			Click_Company.click();
@@ -117,9 +114,9 @@ import CommonClass.HomeFunction;
 			   System.out.println("Rate Company Pop Up Broken");
 		   }
 		   Thread.sleep(2000);
-		   NAME.sendKeys("redbookpcladmin2016@gmail.com");
+		   NAME.sendKeys("vdas4829@gmail.com");
 		   Thread.sleep(1000);
-		   PWD.sendKeys("redbookpcladmin2016");
+		   PWD.sendKeys("t");
 		   SUBMIT.click();
 		   
              Thread.sleep(2000);
@@ -207,8 +204,8 @@ import CommonClass.HomeFunction;
 			{
 				System.out.println("Rate this Company Functionality is Broken");
 			}
-			    }
-                }
+			}
+            }
 
 		   
 	      

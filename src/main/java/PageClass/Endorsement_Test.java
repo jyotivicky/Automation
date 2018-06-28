@@ -1,4 +1,5 @@
 package PageClass;
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -7,16 +8,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
 import com.relevantcodes.extentreports.ExtentTest;
-
 import CommonClass.HomeFunction;
+import WaitClass.Wait;
 
    public class Endorsement_Test 
   {
 	WebDriver driver;
-	HomeFunction Qf;
+	boolean isEnabled;
 	ExtentTest test;
+	List<WebElement> links;
 	
 	@FindBy(xpath="//a[@href='#endorsement-block-popup']") WebElement Endorse_Button;
 	
@@ -24,7 +25,7 @@ import CommonClass.HomeFunction;
 	
 	@FindBy(xpath="//input[@id='edit-search-autocomplete']") WebElement ENTER_COMPANY;
 	
-	@FindBy(xpath="//a[@href='/company/191539/triple-j-produce-inc']") WebElement Click_Company;
+	@FindBy(xpath="//ul[@id='ui-id-1']//li[3]//a[1]//a") WebElement Click_Company;
 	
     @FindBy(xpath="//div[@id='drupal-modal--body']//input[@name='name']") WebElement NAME;
 	
@@ -34,23 +35,26 @@ import CommonClass.HomeFunction;
 	
 	@FindBy(xpath="//button[text()='Endorse']") WebElement Endorse;
 	
+	@FindBy(xpath="//div[@id='endorsement-block']//ul//li//div//span[2]")  WebElement AllTopics;
+	
+	@FindBy(xpath="//div[@id='endorsement-block']//ul//li//div//span[2]//label//i[1]") WebElement Only_Button;
+	
 	@FindBy(xpath="//div[@class='modal-content']//div/div//p//a[text()='Sounds good!']") WebElement Sounds_Good;
 
 	public Endorsement_Test(WebDriver driver)
 	{
 		this.driver=driver;
-		Qf=new HomeFunction(driver);
 		this.test=test;
 		PageFactory.initElements(driver,this);
 	}
 	
 	public void EndroseTest() throws InterruptedException
 	{
-	Qf.Quick();
+	HomeFunction.Quick();
 	ENTER_COMPANY.sendKeys("Triple J Produce Inc");
 	Thread.sleep(2000);
 	Click_Company.click();
-    Thread.sleep(3000);
+    Wait.Thread_Wait();
     
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
     jse.executeScript("window.scrollBy(0,250)", "");
@@ -63,7 +67,7 @@ import CommonClass.HomeFunction;
     NAME.sendKeys("vdas0692@gmail.com");
     Thread.sleep(2000);
     PWD.sendKeys("t");
-    Thread.sleep(3000);
+    Thread.sleep(1000);
     SUBMIT.click(); 
     JavascriptExecutor jse1 = (JavascriptExecutor)driver;
     jse1.executeScript("window.scrollBy(0,450)", "");  
@@ -72,7 +76,7 @@ import CommonClass.HomeFunction;
     int xCord=Endorse_Button.getLocation().x;
 	int yCord=Endorse_Button.getLocation().y;
 	Actions act=new Actions(driver);
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 	
 	act.moveToElement(Endorse_Button, xCord, yCord).perform();
 	
@@ -80,16 +84,50 @@ import CommonClass.HomeFunction;
     jse2.executeScript("window.scrollBy(0,250)", "");
 	Endorse_Button.click();
 
-    Thread.sleep(3000);
-    Button.click();
-    Endorse.click(); 
+    Thread.sleep(2000);
+    	
+        links=driver.findElements(By.xpath("//div[@id='endorsement-block']//ul//li//div//span[2]//label//i[1]"));
+        System.out.println("Total Number of Links : " + links.size());
+    	
+        boolean TopicsButton=driver.findElement(By.xpath("//div[@id='endorsement-block']//ul//li//div//span[2]//label//i[1]")).isEnabled();
+        System.out.println("Button Status : " + TopicsButton);
 
-	Thread.sleep(3000); 
-    
+         try 
+          {
+           List<WebElement> links = driver.findElements(By.xpath("//div[@id='endorsement-block']//ul//li//div//span[2]//i[1]"));
+           int linkcount = links.size(); 
+            System.out.println(links.size()); 
+             for (WebElement myElement : links)
+             {   	 
+            String link = myElement.getText(); 
+            System.out.println(link);
+            System.out.println(myElement);  
+            
+            while(true)
+            {        
+           if (link !=null)
+              {
+        	    System.out.println("Button is Enabled");
+                myElement.click();
+                break;
+               }
+           else
+           {
+        	System.out.println("Button is Disabled");   
+           }
+           } 
+           }
+          }
+       catch (Exception e)
+       {
+        System.out.println("error "+e);
+       }
+
+    Endorse.click(); 
+	Thread.sleep(3000);  
 	String Text="Sounds good!";
     String pop =Sounds_Good.getText();
-    System.out.println("The Text: "+ pop);
-    
+    System.out.println("The Text: "+ pop); 
     Assert.assertEquals(pop, "Sounds good!");    
     if(Text.equals(pop))
     {
@@ -100,9 +138,39 @@ import CommonClass.HomeFunction;
     	System.out.println("Endorsement Pop up is Not working Fine");
     }
 	}
-	}
+    }
+	
 
 
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
    
    
