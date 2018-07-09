@@ -80,7 +80,6 @@ import CommonClass.HomeFunction;
         Thread.sleep(2000);
 
         String Actual=Pop_Over_Text.getText();  
-        System.out.println("Text :" + Actual);
         String Expected="View Contacts";     
         String Expected2="You must be logged in to view a company's contacts";
         

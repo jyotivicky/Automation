@@ -88,19 +88,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
     				   Thread.sleep(1000);
     				   SUBMIT.click();
     				   Thread.sleep(2000);
-    				   System.out.println("Test Passed");
-    				   
+    				   System.out.println("Test Passed");   
     				break;
-    				
     				}
     			else
     			    {
     				System.out.println("Claim Button is Absent");
     				continue;
     			    }
-    			}
-	           }
-               }
+    			    }
+	                }
+                    }
           
 
     

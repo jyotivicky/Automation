@@ -36,4 +36,4 @@ import org.openqa.selenium.support.PageFactory;
 		
 		QUICKSEARCH.click();
 	}
-   }
+    }

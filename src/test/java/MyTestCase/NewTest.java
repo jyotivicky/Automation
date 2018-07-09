@@ -1,17 +1,11 @@
 package MyTestCase;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.EmptyStackException;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -20,37 +14,33 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.gargoylesoftware.htmlunit.javascript.configuration.BrowserName;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import BaseClass.Red_InvokeBrowser;
 import CommonClass.ExcelData;
-import CommonClass.Home_Page;
-import CommonClass.ReadData;
 import CommonClass.WriteData;
 import ExecutionReport.Extent_Report;
 import ExecutionReport.ScreenShot;
 import PageClass.AdvancedSearch_Popup_Test;
-import PageClass.ClaimPOP_UP_Test;
+import PageClass.Claim_POP_UP_Test;
 import PageClass.Claim_Submit_Test;
 import PageClass.Contact_Test;
 import PageClass.Endorsement_Test;
 import PageClass.Financial_Snapshot_Popup_Test;
 import PageClass.Login_Test;
+import PageClass.Non_LoggedIn_User_Test;
 import PageClass.ProduceIndex;
 import PageClass.RateCompany_Popup_Test;
 import PropertyClass.Property;
 
   public class NewTest 
- 
  {
 	WebDriver driver;
 	String browser;
 	String url;
 	Login_Test login;
-	ClaimPOP_UP_Test claim;
+	Claim_POP_UP_Test claim;
 	RateCompany_Popup_Test rest;
 	ScreenShot sc;
 	Financial_Snapshot_Popup_Test financialSnap;
@@ -62,38 +52,90 @@ import PropertyClass.Property;
 	Endorsement_Test Endorse;
 	ExtentTest test;
 	ExtentReports report;
-	Home_Page Hommy;
-	ClaimPOP_UP_Test poppy;
+	Claim_POP_UP_Test poppy;
 	ExcelData read;
+	Non_LoggedIn_User_Test pop;
 	WriteData sss;
 	
-	//@Parameters(browser)
+	@Parameters("browser")
 	
-	@BeforeClass
-	public void setUpClass() throws IOException ,InterruptedException 
-	{	 	  
-		 report=new ExtentReports("C:\\Test-OXYGEN\\RedBook\\report\\redbook.html",true);  
-		 test=report.startTest("RedBookTesting");
-		 test.log(LogStatus.INFO, "Browser is invoked");
-		 report.addSystemInfo("Project", "Redbook Automation");
-		 report.addSystemInfo("Environment", "DEV");
-		 report.addSystemInfo("Test Engineer", "Jyotiprakash"); 
-
-		 browser=Property.getData("DATA", "browserName");
-		 url=Property.getData("DATA", "url");
-	}
+//	@BeforeClass
+//	public void setUpClass(String browser) throws IOException ,InterruptedException 
+//	{	 	  
+//		 report=new ExtentReports("C:\\Test-OXYGEN\\RedBook\\report\\redbook.html",true);  
+//		 report.addSystemInfo("Project", "Redbook Automation");
+//		 report.addSystemInfo("Environment", "DEV");
+//		 report.addSystemInfo("Test Engineer", "Jyotiprakash");
+		 
+			//if(browser.equals("FF")) 
+//				{
+//					System.setProperty("webdriver.gecko.driver","C:\\Users\\VICKY\\Desktop\\geckodriver.exe");
+//					driver=new FirefoxDriver();
+//					driver.manage().window().maximize();
+//				}
+//				else if(browser.equals("chrome")) 
+//				{
+//					System.setProperty("webdriver.chrome.driver","C:\\Users\\VICKY\\Desktop\\chromedriver.exe");
+//					driver = new ChromeDriver(); 
+//					driver.manage().window().maximize();			
+//				}	
+//				else if(browser.equals("IE"))
+//				{
+//					System.setProperty("webdriver.ie.driver","C:\\Users\\VICKY\\Desktop\\IEDriverServer-64.exe");
+//					driver = new InternetExplorerDriver();
+//					driver.manage().window().maximize();
+//				}	
+//				driver.get("https://dev-redbook-pcl.pantheonsite.io/");
+//
+//		 //browser=Property.getData("DATA", "browserName");
+//		 //url=Property.getData("DATA", "url"); 
+	//}
 
 	@BeforeMethod()
-	public void Setup() throws InterruptedException, IOException
+	public void Setup(String browser) throws InterruptedException, IOException
 	   {	   
-		 driver=Red_InvokeBrowser.openBrowser(browser); 
-		 driver.get(url); 
-		 login=new Login_Test(driver); 
-		 rest=new RateCompany_Popup_Test(driver,test);
+//		 report=new ExtentReports("C:\\Test-OXYGEN\\RedBook\\report\\redbook.html",true);  
+//		 report.addSystemInfo("Project", "Redbook Automation");
+//		 report.addSystemInfo("Environment", "DEV");
+//		 report.addSystemInfo("Test Engineer", "Jyotiprakash");
+		 
+		if(browser.equals("FF")) 
+		{
+			System.setProperty("webdriver.gecko.driver","C:\\Users\\VICKY\\Desktop\\geckodriver.exe");
+			driver=new FirefoxDriver();
+			driver.manage().window().maximize();
+		}
+		else if(browser.equals("chrome")) 
+		{
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\VICKY\\Desktop\\chromedriver.exe");
+			driver = new ChromeDriver(); 
+			driver.manage().window().maximize();			
+		}	
+		else if(browser.equals("IE"))
+		{
+			System.setProperty("webdriver.ie.driver","C:\\Users\\VICKY\\Desktop\\IEDriverServer-64.exe");
+			driver = new InternetExplorerDriver();
+			driver.manage().window().maximize();
+		}	
+		driver.get("https://dev-redbook-pcl.pantheonsite.io/");
+
+		 //driver=Red_InvokeBrowser.openBrowser(browser); 
+		 //driver.get(url); 
+		
+		 report=new ExtentReports("C:\\Test-OXYGEN\\RedBook\\report\\redbook.html",true);  
+		 report.addSystemInfo("Project", "Redbook Automation");
+		 report.addSystemInfo("Environment", "DEV");
+		 report.addSystemInfo("Test Engineer", "Jyotiprakash");
+		
+		
+		
+		 login=new Login_Test(driver, test,report); 
+		 rest=new RateCompany_Popup_Test(driver,test,report);
 		 advanced=new AdvancedSearch_Popup_Test(driver,test);
 		 PIN=new ProduceIndex(driver);
 		 Endorse=new Endorsement_Test(driver);
-		 financialSnap=new Financial_Snapshot_Popup_Test(driver);
+		 pop=new Non_LoggedIn_User_Test(driver, test);
+		 financialSnap=new Financial_Snapshot_Popup_Test(driver, test, report);
 		 ER=new Extent_Report();
 		 Submit=new Claim_Submit_Test(driver,test);
 		 sc=new ScreenShot(driver);
@@ -106,23 +148,36 @@ import PropertyClass.Property;
   { 
 	  String un=Property.getData("DATA", "username");
 	  String pwd=Property.getData("DATA", "password");
-	  login.UserLogin(un, pwd);	  
+	  
+	  String un1=Property.getData("DATA", "username1");
+	  String pwd1=Property.getData("DATA","password1");
+	  
+	  login.UserLogin(un, pwd,un1,pwd1);	
+	  
 	  String title=login.ValidateTitle();
 	  Assert.assertEquals("Home | Produce Market Guide",title);
 	  test=report.startTest("Login Test");
 	  test.log(LogStatus.INFO, "Status of Login Test");
   }
-
+  
   @Test(priority=2)
+  public void CheckPopUp() throws InterruptedException
+  {
+	  pop.PopUps();
+	  test=report.startTest("Pop Up Test");
+	  test.log(LogStatus.INFO, "Status of Pop Up UI Test");
+  }
+
+  @Test(priority=3)
   public void CheckClaim() throws IOException, Exception
   {
-	  poppy=new ClaimPOP_UP_Test(driver);
+	  poppy=new Claim_POP_UP_Test(driver);
 	  poppy.ClaimTest();
 	  test=report.startTest("Claim Company Test");
 	  test.log(LogStatus.INFO, "Status of Company Claim Functionality Test");
   }
   
-  @Test(priority=3)
+  @Test(priority=4)
   public void CheckRating() throws InterruptedException
   {
 	  rest.RateTest();
@@ -130,7 +185,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Rate This Company Functionality Test");
   }
   
-  @Test(priority=4)
+  @Test(priority=5)
   public void CheckFinancialSnapshot() throws InterruptedException
   {
 	  financialSnap.FinancialTest();
@@ -138,7 +193,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Financial Snapshot Functionality Test");
   }
   
-  @Test(priority=5)
+  @Test(priority=6)
   public void CheckAdvancedPopup() throws InterruptedException
   {
 	  advanced.AdvancedPopupTest();
@@ -146,7 +201,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Advanced Search Pop up Test");
   }
   
-  @Test(priority=6)
+  @Test(priority=7)
    public void CheckContact() throws InterruptedException
    {
 	  contact.ContactTest();
@@ -154,7 +209,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Contacts Logged in and Looged out User Test");
    }
   
-  @Test(priority=9)
+  @Test(enabled=false)
   public void CheckProduce() throws InterruptedException
   {
 	 PIN.ProduceIndex_Test();
@@ -162,7 +217,7 @@ import PropertyClass.Property;
 	 test.log(LogStatus.INFO, "Status of Produce Index Test"); 
   }
   
-  @Test(priority=7)
+  @Test(priority=8)
   public void CheckSubmit() throws InterruptedException
   {
 	  Submit.SubmitTest();
@@ -170,7 +225,7 @@ import PropertyClass.Property;
 	  test.log(LogStatus.INFO, "Status of Claim Submit Test");
   }
 
-  @Test(enabled=false)
+  @Test(priority=9)
   public void CheckEndorse() throws InterruptedException
   {
 	  Endorse.EndroseTest();
@@ -180,7 +235,7 @@ import PropertyClass.Property;
   
   @AfterMethod
   public void TestSucessfullReport(ITestResult result) throws IOException, EmptyStackException
-  {	
+    {	
 	 if(result.getStatus()==result.SUCCESS) 
 	 {
 		 test.log(LogStatus.PASS, "Test Case Got Pass");
@@ -193,8 +248,7 @@ import PropertyClass.Property;
 	 else if (result.getStatus()==result.FAILURE) 
 	 {
 		 test.log(LogStatus.FAIL, "Test Case Got Failed");
-		 
-		 String Path=ScreenShot.CaptureScreenshot(driver, "screenshotName");
+		 String Path=ScreenShot.CaptureScreenshot(driver, "screenshotName","s");
 		 test.log(LogStatus.FAIL, result.getThrowable());
          test.log(LogStatus.FAIL, "Snapshot below: " + test.addScreenCapture(Path));
 	}

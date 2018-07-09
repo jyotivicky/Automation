@@ -8,9 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
   public class SelectClass 
-
-   {
-	  
+   { 
 	public static void selectingByvalue(WebElement element,String value) 
 	{	
 		Select sel=new Select(element);
@@ -27,11 +25,5 @@ import org.openqa.selenium.support.ui.Select;
 	{
 		Select sel=new Select(element);
 		sel.selectByIndex(index);
-	}
-	
-	public static void Scrool(WebDriver driver)
-	{
-	   JavascriptExecutor jse = (JavascriptExecutor)driver;
-       jse.executeScript("window.scrollBy(0,350)", "");
 	}
     }

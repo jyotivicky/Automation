@@ -20,17 +20,15 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 		 FileInputStream fis=new FileInputStream("C:\\Users\\VICKY\\Desktop\\DATA.xlsx");
     	 Workbook wb=WorkbookFactory.create(fis);
     	 Sheet sh=wb.getSheet("Sheet2");
-
-    	 sh.getRow(1).createCell(1).setCellValue("Test");
-         
+    	 Row row = sh.createRow(1);
+    	 Cell cell = row.createCell(1);
+    	 //cell.setCellType(cell.C);
+    	 cell.setCellValue("Testing Write");
     	 FileOutputStream fos = new FileOutputStream("C:\\Users\\VICKY\\Desktop\\DATA.xlsx");
-    	 
     	 wb.write(fos);
     	 fos.close();
     	 System.out.println("END OF WRITING DATA IN EXCEL");
     	
-	}
-
-    
+	}   
     }
    

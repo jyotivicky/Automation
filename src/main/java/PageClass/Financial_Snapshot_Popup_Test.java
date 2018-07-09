@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
 import CommonClass.HomeFunction;
@@ -18,6 +19,7 @@ public class Financial_Snapshot_Popup_Test
 	WebDriver driver;
 	HomeFunction qf;
 	ExtentTest test;
+	ExtentReports report;
 	
 	@FindBy(xpath="//a[text()='View Snapshot']") WebElement Financial;
 	
@@ -42,11 +44,11 @@ public class Financial_Snapshot_Popup_Test
 	@FindBy(xpath="//div[@id='drupal-modal']//div[@class='modal-dialog']//div[@class='modal-content']") WebElement Pop_UP_SIZE;
 
 	
-	public Financial_Snapshot_Popup_Test(WebDriver driver)
+	public Financial_Snapshot_Popup_Test(WebDriver driver,ExtentTest test,ExtentReports report)
 	{
 		this.driver=driver;
-		qf=new HomeFunction(driver);
 		this.test=test;
+		this.report=report;
 		PageFactory.initElements(driver, this);
 	}
 	

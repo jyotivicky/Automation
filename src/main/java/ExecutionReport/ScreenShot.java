@@ -7,24 +7,26 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 
    public class ScreenShot 
   {
 	static WebDriver driver;
+	static int i=1;
 	
 	public ScreenShot(WebDriver driver)
 	{
 		this.driver=driver;
 	}
 	
-	public static String CaptureScreenshot(WebDriver driver,String screenshotName) throws IOException
+	public static String CaptureScreenshot(WebDriver driver,String screenshotName,String s) throws IOException
 	       {
 	  			TakesScreenshot screenshot =(TakesScreenshot)driver;
 	  			
 	  			File scrFile = screenshot.getScreenshotAs(OutputType.FILE);
+	  				  			
+	  			String destFile="C:\\Users\\VICKY\\Desktop\\TEST_SHOT\\"+System.currentTimeMillis()+s+".png";
 	  			
-	  			String  destFile="C:\\Users\\VICKY\\Desktop\\TEST_SHOT\\"+screenshotName+".png";
+	  			i++;
 	  			
 	  			File destination=new File(destFile);
 	  			

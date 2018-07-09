@@ -16,10 +16,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 		   driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 	   }
 	   
-	   public static void Thread_Wait() throws InterruptedException
+	   public static void Thread_20() throws InterruptedException
+	   {
+		   Thread.sleep(2000);
+	   }
+	   
+	   public static void Thread_30() throws InterruptedException
 	   {
 		   Thread.sleep(3000);
-	   }	   
+	   }
 	   public static void Explicitly(WebDriver driver,String element)
 	   {
 		   WebDriverWait wait=new WebDriverWait(driver, 30);

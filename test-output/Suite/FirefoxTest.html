@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>FirefoxTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/8</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/10</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 26 13:11:36 IST 2018</td>
+<td>Started on:</td><td>Fri Jul 06 15:09:20 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (539 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7379 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,18 +75,60 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at BaseClass.Red_InvokeBrowser.openBrowser(Red_InvokeBrowser.java:19)
-	at MyTestCase.NewTest.Setup(NewTest.java:92)
+<td title='MyTestCase.DemoTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.DemoTest<br>Parameters: FF</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.50.1&apos;, revision: &apos;d7fc91b29de65b790abb01f3ac5f7ea2191c88a7&apos;, time: &apos;2016-01-29 11:11:26&apos;
+System info: host: &apos;VICKY-PC&apos;, ip: &apos;192.168.1.18&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 8c16003b-f0da-4894-83a9-c0e56ec2c9c6
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+	at MyTestCase.DemoTest.Setup(DemoTest.java:79)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1488142994", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1488142994'><pre>java.lang.NullPointerException
-	at BaseClass.Red_InvokeBrowser.openBrowser(Red_InvokeBrowser.java:19)
-	at MyTestCase.NewTest.Setup(NewTest.java:92)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:161)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:170)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 39 more
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace308022870", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace308022870'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.50.1&apos;, revision: &apos;d7fc91b29de65b790abb01f3ac5f7ea2191c88a7&apos;, time: &apos;2016-01-29 11:11:26&apos;
+System info: host: &apos;VICKY-PC&apos;, ip: &apos;192.168.1.18&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.3, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 8c16003b-f0da-4894-83a9-c0e56ec2c9c6
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+	at MyTestCase.DemoTest.Setup(DemoTest.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -109,9 +151,39 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:161)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:89)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:170)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 39 more
 </pre></div></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -121,85 +193,100 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.tearDown()'><b>tearDown</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
+<tr>
+<td title='MyTestCase.DemoTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.DemoTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
+<tr>
+<td title='MyTestCase.DemoTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.DemoTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
+<tr>
+<td title='MyTestCase.DemoTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.DemoTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -209,45 +296,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='MyTestCase.NewTest.CheckAdvancedPopup()'><b>CheckAdvancedPopup</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.CheckAdvancedPopup()'><b>CheckAdvancedPopup</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.CheckClaim()'><b>CheckClaim</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.CheckClaim()'><b>CheckClaim</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.CheckContact()'><b>CheckContact</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.CheckContact()'><b>CheckContact</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.CheckFinancialSnapshot()'><b>CheckFinancialSnapshot</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.CheckEndorse()'><b>CheckEndorse</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.CheckProduce()'><b>CheckProduce</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.CheckFinancialSnapshot()'><b>CheckFinancialSnapshot</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.CheckRating()'><b>CheckRating</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.CheckPopUp()'><b>CheckPopUp</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.CheckSubmit()'><b>CheckSubmit</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.CheckProduce()'><b>CheckProduce</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 <tr>
-<td title='MyTestCase.NewTest.checkLogin()'><b>checkLogin</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.DemoTest.CheckRating()'><b>CheckRating</b><br>Test class: MyTestCase.DemoTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@4883b407</td></tr>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
+<tr>
+<td title='MyTestCase.DemoTest.CheckSubmit()'><b>CheckSubmit</b><br>Test class: MyTestCase.DemoTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
+<tr>
+<td title='MyTestCase.DemoTest.checkLogin()'><b>checkLogin</b><br>Test class: MyTestCase.DemoTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.DemoTest@548e7350</td></tr>
 </table><p>
 </body>
 </html>

@@ -10,9 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-
 import CommonClass.HomeFunction;
 
    public class RateCompany_Popup_Test 
@@ -20,7 +19,7 @@ import CommonClass.HomeFunction;
 	WebDriver driver;
 	boolean isPresent;
 	ExtentTest test;
-	
+
 	@FindBy(xpath="//a[text()='Rate This Company']") WebElement Rate_Company_Button;
 	
 	@FindBy(xpath="//div[@id='popup-dialog-window']//span[@id='close-dialog']") WebElement Home_Popup;
@@ -79,7 +78,7 @@ import CommonClass.HomeFunction;
 	
 	@FindBy(xpath="//div[@class='clr-grn tc']")  WebElement Text_Pop_UP;
 	
-	public RateCompany_Popup_Test(WebDriver driver,ExtentTest test)
+	public RateCompany_Popup_Test(WebDriver driver,ExtentTest test,ExtentReports report)
 	{
 		this.driver=driver;	
 		this.test=test;

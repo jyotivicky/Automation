@@ -1,28 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test">
+<suite thread-count="2" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="2" name="FirefoxTest" parallel="tests">
+    <parameter name="browser" value="FF"/>
     <classes>
       <class name="MyTestCase.NewTest"/>
     </classes>
-  </test> <!-- Test -->
-  <test name="Test(failed)">
+  </test> <!-- FirefoxTest -->
+  <test thread-count="2" name="ChromeTest" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="MyTestCase.NewTest"/>
+    </classes>
+  </test> <!-- ChromeTest -->
+  <test name="ChromeTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="MyTestCase.NewTest">
         <methods>
-          <include name="CheckSubmit"/>
-          <include name="setUpClass"/>
-          <include name="CheckAdvancedPopup"/>
           <include name="CheckRating"/>
-          <include name="Setup"/>
-          <include name="CheckProduce"/>
+          <include name="CheckPopUp"/>
           <include name="CheckContact"/>
-          <include name="CheckFinancialSnapshot"/>
           <include name="TestSucessfullReport"/>
+          <include name="TestSucessfullReport"/>
+          <include name="CheckEndorse"/>
+          <include name="CheckSubmit"/>
+          <include name="CheckAdvancedPopup"/>
+          <include name="Setup"/>
+          <include name="Setup"/>
+          <include name="CheckFinancialSnapshot"/>
           <include name="CheckClaim"/>
           <include name="checkLogin"/>
         </methods>
       </class> <!-- MyTestCase.NewTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- ChromeTest(failed) -->
+  <test name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="MyTestCase.NewTest">
+        <methods>
+          <include name="CheckRating"/>
+          <include name="CheckPopUp"/>
+          <include name="CheckContact"/>
+          <include name="TestSucessfullReport"/>
+          <include name="TestSucessfullReport"/>
+          <include name="CheckEndorse"/>
+          <include name="CheckSubmit"/>
+          <include name="CheckAdvancedPopup"/>
+          <include name="Setup"/>
+          <include name="Setup"/>
+          <include name="CheckFinancialSnapshot"/>
+          <include name="CheckClaim"/>
+          <include name="checkLogin"/>
+        </methods>
+      </class> <!-- MyTestCase.NewTest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

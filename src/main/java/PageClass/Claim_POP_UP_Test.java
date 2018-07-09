@@ -4,11 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import com.relevantcodes.extentreports.ExtentTest;
 import CommonClass.ExcelData;
 import CommonClass.HomeFunction;
 	 
-	  public class ClaimPOP_UP_Test 
+	  public class Claim_POP_UP_Test 
 	  {
 		WebDriver driver;
 		ExtentTest test;
@@ -30,7 +32,9 @@ import CommonClass.HomeFunction;
 		
 		@FindBy(xpath="//div[@id='claim_stat_msg']//p") WebElement ErrorMessage;
 		
-		public ClaimPOP_UP_Test(WebDriver driver) 
+		@FindBy(xpath="//div[@id='drupal-modal']//div//div//div[2]//div//div[1]//p") WebElement LoginErrorMsg;
+		
+		public Claim_POP_UP_Test(WebDriver driver) 
 		{
 			this.driver=driver;
 			PageFactory.initElements(driver,this);
@@ -43,7 +47,13 @@ import CommonClass.HomeFunction;
 			ENTER_COMPANY.sendKeys("Vidalia Sweet Produce LLC");
 			Thread.sleep(2000);
 			Click_Company.click();
-			Thread.sleep(3000);
+			
+//			String errormsg="Oops... we need you to log in first to claim your company.";
+//			String str=LoginErrorMsg.getText();
+			
+			Thread.sleep(2000);
+			
+			Assert.assertEquals("Oops... we need you to log in first to claim your company.", LoginErrorMsg.getText());
 			
 			if(Click_Claim_Button!= null)
 		      {
@@ -53,9 +63,7 @@ import CommonClass.HomeFunction;
 		    else
 		      {
 			   System.out.println("Claim Button is Present");
-			   System.out.println("testing done allmost.");
 			   Click_Claim_Button.click();
-			   
 			   System.out.println("Claim Company is Working fine");
 		       }
 		       }

@@ -54,14 +54,14 @@ import WaitClass.Wait;
 	ENTER_COMPANY.sendKeys("Triple J Produce Inc");
 	Thread.sleep(2000);
 	Click_Company.click();
-    Wait.Thread_Wait();
+    Wait.Thread_20();
     
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
     jse.executeScript("window.scrollBy(0,250)", "");
     Thread.sleep(3000);
     
     Endorse_Button.click();
-    Thread.sleep(3000);
+    Thread.sleep(2000);
     Button.click();
     Thread.sleep(2000);
     NAME.sendKeys("vdas0692@gmail.com");
@@ -71,7 +71,7 @@ import WaitClass.Wait;
     SUBMIT.click(); 
     JavascriptExecutor jse1 = (JavascriptExecutor)driver;
     jse1.executeScript("window.scrollBy(0,450)", "");  
-    Thread.sleep(3000);
+    Thread.sleep(2000);
     
     int xCord=Endorse_Button.getLocation().x;
 	int yCord=Endorse_Button.getLocation().y;

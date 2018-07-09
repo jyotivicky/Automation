@@ -18,7 +18,4 @@ import org.openqa.selenium.interactions.Actions;
 		Actions act1=new Actions(driver);
 		act1.moveToElement(element).click().perform();		
 	}
-	
-	
-	
-   }
+    }
