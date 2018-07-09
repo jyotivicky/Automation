@@ -16,6 +16,8 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+
+import BaseClass.Red_InvokeBrowser;
 import CommonClass.ExcelData;
 import CommonClass.WriteData;
 import ExecutionReport.Extent_Report;
@@ -70,41 +72,9 @@ import PropertyClass.Property;
 	@BeforeMethod()
 	public void Setup() throws InterruptedException, IOException
 	   {	   
-		 report=new ExtentReports("C:\\Test-OXYGEN\\RedBook\\report\\redbook.html",true);  
-		 report.addSystemInfo("Project", "Redbook Automation");
-		 report.addSystemInfo("Environment", "DEV");
-		 report.addSystemInfo("Test Engineer", "Jyotiprakash");
-		 
-		if(browser.equals("FF")) 
-		{
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\VICKY\\Desktop\\geckodriver.exe");
-			driver=new FirefoxDriver();
-			driver.manage().window().maximize();
-		}
-		else if(browser.equals("chrome")) 
-		{
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\VICKY\\Desktop\\chromedriver.exe");
-			driver = new ChromeDriver(); 
-			driver.manage().window().maximize();			
-		}	
-		else if(browser.equals("IE"))
-		{
-			System.setProperty("webdriver.ie.driver","C:\\Users\\VICKY\\Desktop\\IEDriverServer-64.exe");
-			driver = new InternetExplorerDriver();
-			driver.manage().window().maximize();
-		}	
-		driver.get("https://dev-redbook-pcl.pantheonsite.io/");
+		 driver=Red_InvokeBrowser.openBrowser(browser); 
+		 driver.get(url); 
 
-		 //driver=Red_InvokeBrowser.openBrowser(browser); 
-		 //driver.get(url); 
-		
-		 report=new ExtentReports("C:\\Test-OXYGEN\\RedBook\\report\\redbook.html",true);  
-		 report.addSystemInfo("Project", "Redbook Automation");
-		 report.addSystemInfo("Environment", "DEV");
-		 report.addSystemInfo("Test Engineer", "Jyotiprakash");
-		
-		
-		
 		 login=new Login_Test(driver, test,report); 
 		 rest=new RateCompany_Popup_Test(driver,test,report);
 		 advanced=new AdvancedSearch_Popup_Test(driver,test);
