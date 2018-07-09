@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test">
     <classes>
       <class name="MyTestCase.NewTest"/>
     </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
+  </test> <!-- Test -->
+  <test name="Test(failed)">
     <classes>
       <class name="MyTestCase.NewTest">
         <methods>
           <include name="CheckEndorse"/>
           <include name="CheckSubmit"/>
+          <include name="setUpClass"/>
           <include name="CheckAdvancedPopup"/>
           <include name="CheckRating"/>
+          <include name="Setup"/>
           <include name="CheckPopUp"/>
           <include name="CheckContact"/>
           <include name="CheckFinancialSnapshot"/>
+          <include name="TestSucessfullReport"/>
           <include name="CheckClaim"/>
           <include name="checkLogin"/>
         </methods>
       </class> <!-- MyTestCase.NewTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
