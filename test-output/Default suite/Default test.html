@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/9</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 06 13:22:20 IST 2018</td>
+<td>Started on:</td><td>Mon Jul 09 12:53:56 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (96 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (101 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,19 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td title='MyTestCase.NewTest.setUpClass()'><b>setUpClass</b><br>Test class: MyTestCase.NewTest</td>
 <td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by @Configuration on method Setup but has not been marked @Optional or defined
-in C:\Users\VICKY\AppData\Local\Temp\testng-eclipse-1665903008\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
+Method setUpClass requires 1 parameters but 0 were supplied in the @Configuration annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:191)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:127)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:376)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:201)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
 	at org.testng.TestRunner.privateRun(TestRunner.java:782)
 	at org.testng.TestRunner.run(TestRunner.java:632)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
@@ -102,19 +100,17 @@ in C:\Users\VICKY\AppData\Local\Temp\testng-eclipse-1665903008\testng-customsuit
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1864350231", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1864350231'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by @Configuration on method Setup but has not been marked @Optional or defined
-in C:\Users\VICKY\AppData\Local\Temp\testng-eclipse-1665903008\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
+</pre></div><a href='#' onClick='toggleBox("stack-trace174573182", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace174573182'><pre>org.testng.TestNGException: 
+Method setUpClass requires 1 parameters but 0 were supplied in the @Configuration annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:191)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:127)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:376)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:201)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
 	at org.testng.TestRunner.privateRun(TestRunner.java:782)
 	at org.testng.TestRunner.run(TestRunner.java:632)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
@@ -131,7 +127,7 @@ in C:\Users\VICKY\AppData\Local\Temp\testng-eclipse-1665903008\testng-customsuit
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -144,92 +140,97 @@ in C:\Users\VICKY\AppData\Local\Temp\testng-eclipse-1665903008\testng-customsuit
 <td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
+<tr>
+<td title='MyTestCase.NewTest.Setup()'><b>Setup</b><br>Test class: MyTestCase.NewTest</td>
+<td></td>
+<td>0</td>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.TestSucessfullReport()'><b>TestSucessfullReport</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.tearDown()'><b>tearDown</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -242,47 +243,47 @@ in C:\Users\VICKY\AppData\Local\Temp\testng-eclipse-1665903008\testng-customsuit
 <td title='MyTestCase.NewTest.CheckAdvancedPopup()'><b>CheckAdvancedPopup</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.CheckClaim()'><b>CheckClaim</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.CheckContact()'><b>CheckContact</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.CheckEndorse()'><b>CheckEndorse</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.CheckFinancialSnapshot()'><b>CheckFinancialSnapshot</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.CheckPopUp()'><b>CheckPopUp</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.CheckRating()'><b>CheckRating</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.CheckSubmit()'><b>CheckSubmit</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 <tr>
 <td title='MyTestCase.NewTest.checkLogin()'><b>checkLogin</b><br>Test class: MyTestCase.NewTest</td>
 <td></td>
 <td>0</td>
-<td>MyTestCase.NewTest@57baeedf</td></tr>
+<td>MyTestCase.NewTest@42e26948</td></tr>
 </table><p>
 </body>
 </html>

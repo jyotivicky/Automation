@@ -2,31 +2,28 @@
 <testng-results skipped="9" failed="0" total="9" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="96" started-at="2018-07-06T07:52:20Z" finished-at="2018-07-06T07:52:20Z">
+  <suite name="Default suite" duration-ms="101" started-at="2018-07-09T07:23:56Z" finished-at="2018-07-09T07:23:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="96" started-at="2018-07-06T07:52:20Z" finished-at="2018-07-06T07:52:20Z">
+    <test name="Default test" duration-ms="101" started-at="2018-07-09T07:23:56Z" finished-at="2018-07-09T07:23:56Z">
       <class name="MyTestCase.NewTest">
-        <test-method status="FAIL" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="FAIL" signature="setUpClass(java.lang.String)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="setUpClass" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
-Parameter 'browser' is required by @Configuration on method Setup but has not been marked @Optional or defined
-in C:\Users\VICKY\AppData\Local\Temp\testng-eclipse-1665903008\testng-customsuite.xml]]>
+Method setUpClass requires 1 parameters but 0 were supplied in the @Configuration annotation.]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by @Configuration on method Setup but has not been marked @Optional or defined
-in C:\Users\VICKY\AppData\Local\Temp\testng-eclipse-1665903008\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
+Method setUpClass requires 1 parameters but 0 were supplied in the @Configuration annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:191)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:127)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:376)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:201)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
 	at org.testng.TestRunner.privateRun(TestRunner.java:782)
 	at org.testng.TestRunner.run(TestRunner.java:632)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
@@ -46,112 +43,116 @@ in C:\Users\VICKY\AppData\Local\Temp\testng-eclipse-1665903008\testng-customsuit
           </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="checkLogin()[pri:1, instance:MyTestCase.NewTest@57baeedf]" name="checkLogin" duration-ms="7" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="checkLogin()[pri:1, instance:MyTestCase.NewTest@42e26948]" name="checkLogin" duration-ms="7" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogin -->
-        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSucessfullReport -->
-        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="CheckPopUp()[pri:2, instance:MyTestCase.NewTest@57baeedf]" name="CheckPopUp" duration-ms="2" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="CheckPopUp()[pri:2, instance:MyTestCase.NewTest@42e26948]" name="CheckPopUp" duration-ms="4" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckPopUp -->
-        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSucessfullReport -->
-        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="CheckClaim()[pri:3, instance:MyTestCase.NewTest@57baeedf]" name="CheckClaim" duration-ms="2" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="CheckClaim()[pri:3, instance:MyTestCase.NewTest@42e26948]" name="CheckClaim" duration-ms="1" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckClaim -->
-        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSucessfullReport -->
-        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="CheckRating()[pri:4, instance:MyTestCase.NewTest@57baeedf]" name="CheckRating" duration-ms="1" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="CheckRating()[pri:4, instance:MyTestCase.NewTest@42e26948]" name="CheckRating" duration-ms="1" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckRating -->
-        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSucessfullReport -->
-        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="CheckFinancialSnapshot()[pri:5, instance:MyTestCase.NewTest@57baeedf]" name="CheckFinancialSnapshot" duration-ms="4" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="CheckFinancialSnapshot()[pri:5, instance:MyTestCase.NewTest@42e26948]" name="CheckFinancialSnapshot" duration-ms="1" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckFinancialSnapshot -->
-        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSucessfullReport -->
-        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="CheckAdvancedPopup()[pri:6, instance:MyTestCase.NewTest@57baeedf]" name="CheckAdvancedPopup" duration-ms="1" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="CheckAdvancedPopup()[pri:6, instance:MyTestCase.NewTest@42e26948]" name="CheckAdvancedPopup" duration-ms="2" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckAdvancedPopup -->
-        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSucessfullReport -->
-        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="CheckContact()[pri:7, instance:MyTestCase.NewTest@57baeedf]" name="CheckContact" duration-ms="1" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="CheckContact()[pri:7, instance:MyTestCase.NewTest@42e26948]" name="CheckContact" duration-ms="2" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckContact -->
-        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSucessfullReport -->
-        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="CheckSubmit()[pri:8, instance:MyTestCase.NewTest@57baeedf]" name="CheckSubmit" duration-ms="1" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="CheckSubmit()[pri:8, instance:MyTestCase.NewTest@42e26948]" name="CheckSubmit" duration-ms="1" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckSubmit -->
-        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSucessfullReport -->
-        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="Setup(java.lang.String)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="Setup" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="CheckEndorse()[pri:9, instance:MyTestCase.NewTest@57baeedf]" name="CheckEndorse" duration-ms="1" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="CheckEndorse()[pri:9, instance:MyTestCase.NewTest@42e26948]" name="CheckEndorse" duration-ms="5" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckEndorse -->
-        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="TestSucessfullReport(org.testng.ITestResult)[pri:0, instance:MyTestCase.NewTest@42e26948]" name="TestSucessfullReport" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSucessfullReport -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:MyTestCase.NewTest@57baeedf]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-07-06T13:22:20Z" finished-at="2018-07-06T13:22:20Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:MyTestCase.NewTest@42e26948]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-07-09T12:53:56Z" finished-at="2018-07-09T12:53:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
