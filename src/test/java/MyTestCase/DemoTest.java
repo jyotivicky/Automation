@@ -82,7 +82,7 @@ public class DemoTest
 		 rest=new RateCompany_Popup_Test(driver,test, report);
 		 advanced=new AdvancedSearch_Popup_Test(driver,test);
 		 PIN=new ProduceIndex(driver);
-		 Endorse=new Endorsement_Test(driver);
+		 Endorse=new Endorsement_Test(driver, test);
 		 pop=new Non_LoggedIn_User_Test(driver, test);
 		 financialSnap=new Financial_Snapshot_Popup_Test(driver, test, report);
 		 ER=new Extent_Report();

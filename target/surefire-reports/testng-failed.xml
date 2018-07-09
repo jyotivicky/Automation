@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [Command line suite]">
-  <test name="Command line test" preserve-order="false">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <test name="Test">
     <classes>
-      <class name="MyTestCase.DemoTest"/>
       <class name="MyTestCase.NewTest"/>
     </classes>
-  </test> <!-- Command line test -->
-  <test name="Command line test(failed)">
+  </test> <!-- Test -->
+  <test name="Test(failed)">
     <classes>
-      <class name="MyTestCase.DemoTest">
-        <methods>
-          <include name="CheckEndorse"/>
-          <include name="CheckFinancialSnapshot"/>
-          <include name="CheckSubmit"/>
-          <include name="CheckPopUp"/>
-          <include name="CheckProduce"/>
-          <include name="CheckContact"/>
-          <include name="CheckAdvancedPopup"/>
-          <include name="CheckRating"/>
-          <include name="checkLogin"/>
-          <include name="CheckClaim"/>
-        </methods>
-      </class> <!-- MyTestCase.DemoTest -->
       <class name="MyTestCase.NewTest">
         <methods>
           <include name="CheckEndorse"/>
@@ -36,9 +21,8 @@
           <include name="CheckFinancialSnapshot"/>
           <include name="TestSucessfullReport"/>
           <include name="CheckClaim"/>
-          <include name="checkLogin"/>
         </methods>
       </class> <!-- MyTestCase.NewTest -->
     </classes>
-  </test> <!-- Command line test(failed) -->
-</suite> <!-- Failed suite [Command line suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

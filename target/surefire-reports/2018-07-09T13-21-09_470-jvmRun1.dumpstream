@@ -1,0 +1,161 @@
+# Created on 2018-07-09T13:21:19.001
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:386)
+	at java.lang.Thread.run(Unknown Source)
+
+
+# Created on 2018-07-09T13:21:23.867
+Unexpected IOException: 8,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,chrome not reachable\000A  (Session info: chrome=67.0.3396.99)\000A  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73)\002Cplatform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 4.04 seconds\000ABuild info: version: '2.50.1'\002C revision: 'd7fc91b29de65b790abb01f3ac5f7ea2191c88a7'\002C time: '2016-01-29 11:11:26'\000ASystem info: host: 'VICKY-PC'\002C ip: '192.168.1.18'\002C os.name: 'Windows 7'\002C os.arch: 'amd64'\002C os.version: '6.1'\002C java.version: '1.8.0_131'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73)\002C userDataDir=C:\005CUsers\005CVICKY\005CAppData\005CLocal\005CTemp\005Cscoped_dir8972_8180}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=67.0.3396.99\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: 33f0738027546ca6746b3842bb7f1119,null,chrome not reachable\000A  (Session info: chrome=67.0.3396.99)\000A  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73)\002Cplatform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 4.04 seconds\000ABuild info: version: '2.50.1'\002C revision: 'd7fc91b29de65b790abb01f3ac5f7ea2191c88a7'\002C time: '2016-01-29 11:11:26'\000ASystem info: host: 'VICKY-PC'\002C ip: '192.168.1.18'\002C os.name: 'Windows 7'\002C os.arch: 'amd64'\002C os.version: '6.1'\002C java.version: '1.8.0_131'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73)\002C userDataDir=C:\005CUsers\005CVICKY\005CAppData\005CLocal\005CTemp\005Cscoped_dir8972_8180}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=67.0.3396.99\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: 33f0738027546ca6746b3842bb7f1119,NewTest.Setup:76 \00BB WebDriver chrome not reachable\000A  (Session info: chrome=67.0...,org.openqa.selenium.WebDriverException: \000Achrome not reachable\000A  (Session info: chrome=67.0.3396.99)\000A  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73)\002Cplatform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 4.04 seconds\000ABuild info: version: '2.50.1'\002C revision: 'd7fc91b29de65b790abb01f3ac5f7ea2191c88a7'\002C time: '2016-01-29 11:11:26'\000ASystem info: host: 'VICKY-PC'\002C ip: '192.168.1.18'\002C os.name: 'Windows 7'\002C os.arch: 'amd64'\002C os.version: '6.1'\002C java.version: '1.8.0_131'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73)\002C userDataDir=C:\005CUsers\005CVICKY\005CAppData\005CLocal\005CTemp\005Cscoped_dir8972_8180}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=67.0.3396.99\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: 33f0738027546ca6746b3842bb7f1119\000A\0009at MyTestCase.NewTest.Setup(NewTest.java:76)\000A
+
+
+# Created on 2018-07-09T13:21:23.870
+Unexpected IOException: 5,1,MyTestCase.NewTest,checkLogin(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T13:21:23.871
+Unexpected IOException: 9,1,MyTestCase.NewTest,checkLogin(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.872
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.874
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.875
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckPopUp(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T13:21:23.877
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckPopUp(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.879
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.880
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.882
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckClaim(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T13:21:23.883
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckClaim(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.884
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.885
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.886
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckRating(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T13:21:23.886
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckRating(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.887
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.888
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.888
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckFinancialSnapshot(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T13:21:23.889
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckFinancialSnapshot(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.889
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.890
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.890
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckAdvancedPopup(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T13:21:23.891
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckAdvancedPopup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.891
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.892
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.892
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckContact(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T13:21:23.892
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckContact(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.893
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.893
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.894
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckSubmit(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T13:21:23.894
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckSubmit(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.895
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.895
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.896
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckEndorse(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T13:21:23.896
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckEndorse(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.897
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:23.897
+Unexpected IOException: 9,1,MyTestCase.NewTest,tearDown(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T13:21:24.006
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+

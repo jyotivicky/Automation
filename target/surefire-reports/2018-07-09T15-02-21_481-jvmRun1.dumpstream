@@ -1,0 +1,81 @@
+# Created on 2018-07-09T15:06:19.991
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:386)
+	at java.lang.Thread.run(Unknown Source)
+
+
+# Created on 2018-07-09T15:06:20.444
+Unexpected IOException: 8,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,session not created exception\000Afrom chrome not reachable\000A  (Session info: chrome=67.0.3396.99)\000A  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73)\002Cplatform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 3.91 seconds\000ABuild info: version: '2.50.1'\002C revision: 'd7fc91b29de65b790abb01f3ac5f7ea2191c88a7'\002C time: '2016-01-29 11:11:26'\000ASystem info: host: 'VICKY-PC'\002C ip: '192.168.1.18'\002C os.name: 'Windows 7'\002C os.arch: 'amd64'\002C os.version: '6.1'\002C java.version: '1.8.0_131'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver,null,session not created exception\000Afrom chrome not reachable\000A  (Session info: chrome=67.0.3396.99)\000A  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73)\002Cplatform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 3.91 seconds\000ABuild info: version: '2.50.1'\002C revision: 'd7fc91b29de65b790abb01f3ac5f7ea2191c88a7'\002C time: '2016-01-29 11:11:26'\000ASystem info: host: 'VICKY-PC'\002C ip: '192.168.1.18'\002C os.name: 'Windows 7'\002C os.arch: 'amd64'\002C os.version: '6.1'\002C java.version: '1.8.0_131'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver,NewTest.Setup:75 \00BB SessionNotCreated session not created exception\000Afrom chrome...,org.openqa.selenium.SessionNotCreatedException: \000Asession not created exception\000Afrom chrome not reachable\000A  (Session info: chrome=67.0.3396.99)\000A  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73)\002Cplatform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 3.91 seconds\000ABuild info: version: '2.50.1'\002C revision: 'd7fc91b29de65b790abb01f3ac5f7ea2191c88a7'\002C time: '2016-01-29 11:11:26'\000ASystem info: host: 'VICKY-PC'\002C ip: '192.168.1.18'\002C os.name: 'Windows 7'\002C os.arch: 'amd64'\002C os.version: '6.1'\002C java.version: '1.8.0_131'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000A\0009at MyTestCase.NewTest.Setup(NewTest.java:75)\000A
+
+
+# Created on 2018-07-09T15:06:20.445
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckAdvancedPopup(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T15:06:20.446
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckAdvancedPopup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.449
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.450
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.451
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckContact(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T15:06:20.452
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckContact(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.453
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.454
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.455
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckSubmit(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T15:06:20.455
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckSubmit(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.456
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.458
+Unexpected IOException: 9,1,MyTestCase.NewTest,Setup(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.459
+Unexpected IOException: 5,1,MyTestCase.NewTest,CheckEndorse(MyTestCase.NewTest),MyTestCase.NewTest,null,null
+
+
+# Created on 2018-07-09T15:06:20.459
+Unexpected IOException: 9,1,MyTestCase.NewTest,CheckEndorse(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.460
+Unexpected IOException: 9,1,MyTestCase.NewTest,TestSucessfullReport(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.463
+Unexpected IOException: 9,1,MyTestCase.NewTest,tearDown(MyTestCase.NewTest),null,null,null
+
+
+# Created on 2018-07-09T15:06:20.712
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+

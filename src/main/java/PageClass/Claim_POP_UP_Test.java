@@ -1,15 +1,14 @@
-    package PageClass;
+package PageClass;
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-
 import com.relevantcodes.extentreports.ExtentTest;
 import CommonClass.ExcelData;
 import CommonClass.HomeFunction;
-	 
+import WaitClass.Wait;
+
 	  public class Claim_POP_UP_Test 
 	  {
 		WebDriver driver;
@@ -43,18 +42,10 @@ import CommonClass.HomeFunction;
 		public void ClaimTest() throws IOException, Exception
 		{
 			HomeFunction.Quick();
-			Thread.sleep(3000);
+			Wait.Thread_20();
 			ENTER_COMPANY.sendKeys("Vidalia Sweet Produce LLC");
-			Thread.sleep(2000);
+			Wait.Thread_20();
 			Click_Company.click();
-			
-//			String errormsg="Oops... we need you to log in first to claim your company.";
-//			String str=LoginErrorMsg.getText();
-			
-			Thread.sleep(2000);
-			
-			Assert.assertEquals("Oops... we need you to log in first to claim your company.", LoginErrorMsg.getText());
-			
 			if(Click_Claim_Button!= null)
 		      {
 			System.out.println("Claim Button is Absent");

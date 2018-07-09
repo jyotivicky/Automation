@@ -41,7 +41,7 @@ import WaitClass.Wait;
 	
 	@FindBy(xpath="//div[@class='modal-content']//div/div//p//a[text()='Sounds good!']") WebElement Sounds_Good;
 
-	public Endorsement_Test(WebDriver driver)
+	public Endorsement_Test(WebDriver driver,ExtentTest test)
 	{
 		this.driver=driver;
 		this.test=test;
@@ -51,32 +51,32 @@ import WaitClass.Wait;
 	public void EndroseTest() throws InterruptedException
 	{
 	HomeFunction.Quick();
-	ENTER_COMPANY.sendKeys("Triple J Produce Inc");
+	ENTER_COMPANY.sendKeys("GHSW LLC");
 	Thread.sleep(2000);
 	Click_Company.click();
     Wait.Thread_20();
     
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
-    jse.executeScript("window.scrollBy(0,250)", "");
-    Thread.sleep(3000);
+    jse.executeScript("window.scrollBy(0,350)", "");
+    Wait.Thread_30();
     
     Endorse_Button.click();
-    Thread.sleep(2000);
+    Wait.Thread_20();
     Button.click();
-    Thread.sleep(2000);
+    Wait.Thread_20();
     NAME.sendKeys("vdas0692@gmail.com");
-    Thread.sleep(2000);
+    Wait.Thread_20();
     PWD.sendKeys("t");
     Thread.sleep(1000);
     SUBMIT.click(); 
     JavascriptExecutor jse1 = (JavascriptExecutor)driver;
     jse1.executeScript("window.scrollBy(0,450)", "");  
-    Thread.sleep(2000);
+    Wait.Thread_20();;
     
     int xCord=Endorse_Button.getLocation().x;
 	int yCord=Endorse_Button.getLocation().y;
 	Actions act=new Actions(driver);
-	Thread.sleep(2000);
+	 Wait.Thread_20();
 	
 	act.moveToElement(Endorse_Button, xCord, yCord).perform();
 	
@@ -84,8 +84,7 @@ import WaitClass.Wait;
     jse2.executeScript("window.scrollBy(0,250)", "");
 	Endorse_Button.click();
 
-    Thread.sleep(2000);
-    	
+      Wait.Thread_20();    	
         links=driver.findElements(By.xpath("//div[@id='endorsement-block']//ul//li//div//span[2]//label//i[1]"));
         System.out.println("Total Number of Links : " + links.size());
     	
@@ -124,7 +123,7 @@ import WaitClass.Wait;
        }
 
     Endorse.click(); 
-	Thread.sleep(3000);  
+	Wait.Thread_30();
 	String Text="Sounds good!";
     String pop =Sounds_Good.getText();
     System.out.println("The Text: "+ pop); 
