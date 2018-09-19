@@ -53,6 +53,14 @@ import PropertyClass.Property;
 	Non_LoggedIn_User_Test pop;
 	LastUpdatedTest dateTest;
 	
+	
+	
+	
+	
+	
+	
+	
+	
 	@BeforeClass
 	public void setUpClass() throws IOException ,InterruptedException 
 	{	 	  
