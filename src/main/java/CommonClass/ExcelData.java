@@ -2,6 +2,8 @@ package CommonClass;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -9,14 +11,15 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import WaitClass.Wait;
 
     public class ExcelData 
        {
     	static WebDriver driver;
-    	
+    
 		static @FindBy(xpath="//ul[@id='ui-id-1']//li[3]//a[1]//a") WebElement Click_Company;
 		
 		static @FindBy(xpath="//div[@class='mn-wrp']//div//section//div//article//h1/small//div") WebElement Click_Claim_Button;
@@ -32,31 +35,34 @@ import org.openqa.selenium.support.ui.WebDriverWait;
         static @FindBy(xpath="//div[@id='drupal-modal--body']//button[@type='submit']") WebElement SUBMIT;
         
         static @FindBy(xpath="//div[@id='drupal-modal--body']//button") WebElement Submit_Request;
-        
-    	public ExcelData(WebDriver driver)
-    	{
-    		this.driver=driver;
-    		PageFactory.initElements(driver, this);
-    	}
 
 	  public static void ReadData() throws Exception, Exception, IOException 
 	      {
 	    	FileInputStream fis=new FileInputStream("C:\\Users\\VICKY\\Desktop\\DATA.xlsx");
+	    	
 	    	Workbook wb=WorkbookFactory.create(fis);
+	    	
 	    	Sheet sh=wb.getSheet("Sheet1");
 	    	
 	    	int count=sh.getLastRowNum();
+	    	
 	    	System.out.println("Total number of rows:"+count);
 
-	    	for(int i=1;i<= count;i++)
+	    	for(int i=1;i<=count;i++)
 	    	 {
 	    		Row row=sh.getRow(i);
+	    		
 	    		String COMPANY= row.getCell(0).getStringCellValue();
+	    		
     			System.out.println("Company Name : " + COMPANY);
+    			
                 Quick_Search_Box.sendKeys(COMPANY);
-    			Thread.sleep(3000);
+                
+    			Wait.Thread_20();
+    			
                 Click_Company.click();
-    			Thread.sleep(3000);
+                
+    			Wait.Thread_30();
                 
     			boolean b=driver.getPageSource().contains("Claim Company");
     				
@@ -64,7 +70,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
     			    {
     				System.out.println("Claim Button is Present");
     				Click_Claim_Button.click();
-    				
+    			
     				   WebDriverWait wait1=new WebDriverWait(driver, 10);
     				   wait1.until(ExpectedConditions.visibilityOf(Pop_UP_Size));   
     		     	   WebElement loginPopup=Pop_UP_Size; 
@@ -81,14 +87,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
     				   {
     					   System.out.println(" Claim Company Pop Up Broken");
     				   }
-    				   Thread.sleep(3000);
+    				   Wait.Thread_30();
     				   NAME.sendKeys("vdas0692@gmail.com");
     				   Thread.sleep(1000);
     				   PWD.sendKeys("t");
     				   Thread.sleep(1000);
     				   SUBMIT.click();
-    				   Thread.sleep(2000);
-    				   System.out.println("Test Passed");   
+    				   Wait.Thread_20();
+    				   System.out.println("Test Passed"); 
+    				   
     				break;
     				}
     			else
@@ -99,7 +106,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
     			    }
 	                }
                     }
-          
+                            
 
     
     

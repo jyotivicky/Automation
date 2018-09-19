@@ -1,7 +1,5 @@
 package ExecutionReport;
 
-import java.io.File;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -13,7 +11,6 @@ import com.relevantcodes.extentreports.LogStatus;
 	WebDriver driver;
 	ExtentTest test;
 	ExtentReports report;
-	
 	
 	public  void Report(ITestResult result)
 	  {	

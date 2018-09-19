@@ -1,7 +1,5 @@
 package PageClass;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,14 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-
-import WaitClass.Wait;
 
  public class AdvancedSearch_Popup_Test 
-
- {
-	
+ {	
  WebDriver driver;
  ExtentTest test;
  
@@ -52,7 +45,6 @@ public void AdvancedPopupTest() throws InterruptedException
 	   Home_Popup.click();
  	   Thread.sleep(3000);
 	   Advanced_Search_Button.click();
-	   test.log(LogStatus.INFO, "Advanced Search Pop Up is Working fine");
 	   WebDriverWait wait1=new WebDriverWait(driver, 10);
 	   wait1.until(ExpectedConditions.visibilityOf(Advanced_Search_Popup));
 	   WebElement loginPopup=driver.findElement(By.xpath("//div[@id='drupal-modal']//div[@class='modal-dialog']//div[@class='modal-content']")); 

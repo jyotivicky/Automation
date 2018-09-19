@@ -51,7 +51,7 @@ import WaitClass.Wait;
 	public void EndroseTest() throws InterruptedException
 	{
 	HomeFunction.Quick();
-	ENTER_COMPANY.sendKeys("GHSW LLC");
+	ENTER_COMPANY.sendKeys("Hiland Farms");
 	Thread.sleep(2000);
 	Click_Company.click();
     Wait.Thread_20();

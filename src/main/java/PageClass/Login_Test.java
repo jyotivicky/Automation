@@ -8,13 +8,15 @@ import org.testng.Assert;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
+import WaitClass.Wait;
+
    public class Login_Test 
   {
    WebDriver driver;
    ExtentTest test;
    ExtentReports report;
 
-	@FindBy(xpath="//div[@id='popup-dialog-window']//span[@id='close-dialog']") WebElement Home_Popup;
+	@FindBy(xpath="//div[@id='popup-dialog-window']//span[@id='close-dialogggggg']") WebElement Home_Popup;
 
 	@FindBy(xpath="//div[@class='user-login user-login-front pull-right']/a[text()='Login']") WebElement LoginButton;
 	
@@ -48,23 +50,23 @@ import com.relevantcodes.extentreports.ExtentTest;
 	public void UserLogin(String un,String pwd,String un1,String pwd1) throws InterruptedException
 	   {
 		Home_Popup.click();
-		Thread.sleep(2000);
+		Wait.Thread_20();
 		
 		LoginButton.click();
 		
-		Thread.sleep(2000);
+		Wait.Thread_20();
 		NAME.sendKeys(un1);
 		Thread.sleep(1000);
 		PWD.sendKeys(pwd1);
-		Thread.sleep(2000);
+		Wait.Thread_20();
 		SUBMIT.click();
 		  
-		Thread.sleep(3000);
+		Wait.Thread_30();
 		Assert.assertEquals("Forgot your password?", ErrorMessage.getText());			
 		System.out.println("User Entered Wrong Password");
 
 		PWD.sendKeys(pwd);
-		Thread.sleep(2000);
+		Wait.Thread_20();
 		SUBMIT.click();
 		System.out.println("User Entered a Valid Password");
 	    }

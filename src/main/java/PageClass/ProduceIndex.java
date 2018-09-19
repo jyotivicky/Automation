@@ -12,6 +12,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
+import WaitClass.Wait;
+
    public class ProduceIndex 
    {
 	WebDriver driver;
@@ -26,6 +28,8 @@ import com.relevantcodes.extentreports.ExtentTest;
 	
 	@FindBy(xpath="//div[div[div[div[span[a[text()='All']]]]]]/div[2]//a") WebElement All_Links;
 	
+	@FindBy(xpath="//div[@class='sliding-menu']//div[2]//nav//ul//li[2]//a[@class='dropdown-toggle']") WebElement FindProduce; 
+	
 	@FindBy(xpath="//a[text()='Find companies']") WebElement Find_Companies;
 	
 	int count=0;
@@ -33,7 +37,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 	ArrayList<String> errorLink=new ArrayList<String>();
 	ExtentTest test;
 	
-	public ProduceIndex(WebDriver driver)
+	public ProduceIndex(WebDriver driver,ExtentTest test)
 	{
 		this.driver=driver;
 		this.test=test;
@@ -42,20 +46,19 @@ import com.relevantcodes.extentreports.ExtentTest;
 	
     public void ProduceIndex_Test() throws InterruptedException 
                {
-			    Thread.sleep(3000); 
+			    Wait.Thread_30(); 
 			    Home_Pop_Up.click();
-			    Thread.sleep(3000);
+			    Wait.Thread_30(); 
 			    Menu_Button.click();
-			    Thread.sleep(3000);
-			    driver.findElement(By.partialLinkText("Find Produce")).click();
-			    Thread.sleep(3000);
+			    Wait.Thread_30(); 
+			    FindProduce.click();
+			    Wait.Thread_30(); 
 			    Produce_Index.click();
 			    
 			    links=driver.findElements(By.xpath("//div[div[div[div[span[a[text()='All']]]]]]/div[2]//a"));
 		    	while(count<links.size()) 
-		    	{ 		
-		    		List<WebElement> alllLinks=driver.findElements(By.xpath("//div[div[div[div[span[a[text()='All']]]]]]/div[2]//a"));
-		    			
+		    	   { 		
+		    		List<WebElement> alllLinks=driver.findElements(By.xpath("//div[div[div[div[span[a[text()='All']]]]]]/div[2]//a"));    			
 		    				 scrollToExactElement(alllLinks.get(count));
 		    				 movetToCordinate(alllLinks.get(count));
 		    				 alllLinks.get(count).click();
@@ -81,7 +84,6 @@ import com.relevantcodes.extentreports.ExtentTest;
 		    	System.out.println(errorLink);
 		    	System.out.println("The total no of link doesn't have compnay buttton is "+errorLinkCount);
 		    		}
-
      public boolean isElementPresent(String xpath)  
         {
 		  List<WebElement> element=driver.findElements(By.xpath(xpath));
@@ -94,7 +96,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 			  isPresent=false;
 		  }
 	return isPresent;	  
-      }
+          }
 
    public void scrollToExactElement(WebElement element) throws InterruptedException 
    {
@@ -102,11 +104,11 @@ import com.relevantcodes.extentreports.ExtentTest;
 	Thread.sleep(500); 
    }
 
-   public void movetToCordinate(WebElement eleemnt) 
+   public void movetToCordinate(WebElement element) 
    {
 	Actions act=new Actions(driver);
-	int xCord=eleemnt.getLocation().x;
-	int yCord=eleemnt.getLocation().y;
+	int xCord=element.getLocation().x;
+	int yCord=element.getLocation().y;
 	act.moveByOffset(xCord, yCord).perform();
    }
    
@@ -124,3 +126,11 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 
 
+
+   
+   
+   
+   
+   
+   
+   

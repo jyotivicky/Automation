@@ -46,6 +46,7 @@ import WaitClass.Wait;
 			ENTER_COMPANY.sendKeys("Vidalia Sweet Produce LLC");
 			Wait.Thread_20();
 			Click_Company.click();
+			
 			if(Click_Claim_Button!= null)
 		      {
 			System.out.println("Claim Button is Absent");

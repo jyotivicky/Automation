@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 	public static void ScroolDown(WebDriver driver)
 	{
 	   JavascriptExecutor jse = (JavascriptExecutor)driver;
-       jse.executeScript("window.scrollBy(0,350)", "");
+       jse.executeScript("window.scrollBy(0,650)", "");
 	}
 	public static void ScroolUp(WebDriver driver)
 	{

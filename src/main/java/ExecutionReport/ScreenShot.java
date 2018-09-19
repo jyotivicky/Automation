@@ -15,9 +15,8 @@ import org.openqa.selenium.WebDriver;
 	
 	public ScreenShot(WebDriver driver)
 	{
-		this.driver=driver;
+		ScreenShot.driver=driver;
 	}
-	
 	public static String CaptureScreenshot(WebDriver driver,String screenshotName,String s) throws IOException
 	       {
 	  			TakesScreenshot screenshot =(TakesScreenshot)driver;

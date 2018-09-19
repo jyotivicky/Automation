@@ -6,15 +6,16 @@ C:\Test-OXYGEN\RedBook\src\main\java\CommonClass\WriteExcelData.java
 C:\Test-OXYGEN\RedBook\src\main\java\PageClass\AdvancedSearch_Popup_Test.java
 C:\Test-OXYGEN\RedBook\src\main\java\CommonClass\ActionClass.java
 C:\Test-OXYGEN\RedBook\src\main\java\CommonClass\ListClass.java
-C:\Test-OXYGEN\RedBook\src\main\java\CommonClass\WriteData.java
 C:\Test-OXYGEN\RedBook\src\main\java\PageClass\Endorsement_Test.java
 C:\Test-OXYGEN\RedBook\src\main\java\PageClass\Login_Test.java
 C:\Test-OXYGEN\RedBook\src\main\java\CommonClass\HomeFunction.java
 C:\Test-OXYGEN\RedBook\src\main\java\PageClass\RateCompany_Popup_Test.java
 C:\Test-OXYGEN\RedBook\src\main\java\WaitClass\Wait.java
 C:\Test-OXYGEN\RedBook\src\main\java\PageClass\Claim_POP_UP_Test.java
+C:\Test-OXYGEN\RedBook\src\main\java\PageClass\DataProviderTest.java
 C:\Test-OXYGEN\RedBook\src\main\java\PageClass\Contact_Test.java
 C:\Test-OXYGEN\RedBook\src\main\java\BaseClass\Red_InvokeBrowser.java
+C:\Test-OXYGEN\RedBook\src\main\java\PageClass\LastUpdatedTest.java
 C:\Test-OXYGEN\RedBook\src\main\java\PageClass\Non_LoggedIn_User_Test.java
 C:\Test-OXYGEN\RedBook\src\main\java\PageClass\ProduceIndex.java
 C:\Test-OXYGEN\RedBook\src\main\java\CommonClass\SelectClass.java

@@ -21,6 +21,7 @@
           <include name="CheckFinancialSnapshot"/>
           <include name="TestSucessfullReport"/>
           <include name="CheckClaim"/>
+          <include name="checkLogin"/>
         </methods>
       </class> <!-- MyTestCase.NewTest -->
     </classes>

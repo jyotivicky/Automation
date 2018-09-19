@@ -6,4 +6,17 @@
       <class name="MyTestCase.NewTest"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="MyTestCase.NewTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="Setup"/>
+          <include name="TestSucessfullReport"/>
+          <include name="tearDown"/>
+          <include name="CheckDate"/>
+        </methods>
+      </class> <!-- MyTestCase.NewTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

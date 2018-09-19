@@ -20,6 +20,7 @@ public class Financial_Snapshot_Popup_Test
 	HomeFunction qf;
 	ExtentTest test;
 	ExtentReports report;
+	Login_Test test123;
 	
 	@FindBy(xpath="//a[text()='View Snapshot']") WebElement Financial;
 	
@@ -55,7 +56,7 @@ public class Financial_Snapshot_Popup_Test
 	public void FinancialTest() throws InterruptedException
 	{
 		  Thread.sleep(2000);
-		  qf.Quick();
+		  HomeFunction.Quick();
 		
 			ENTER_COMPANY.sendKeys("Hronis Inc");
 			Thread.sleep(2000);

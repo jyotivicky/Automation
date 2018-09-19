@@ -1,27 +1,14 @@
-<suite name="Suite" parallel="tests" thread-count="2" verbose="1">
- 
- <test name="FirefoxTest" parallel="tests" thread-count="2">
- 
- <parameter name="browser" value="FF" />
- 
- <classes>
- 
- <class name="MyTestCase.DemoTest" />
- 
- </classes>
- 
- </test>
- 
- <test name="ChromeTest" parallel="tests" thread-count="2">
- 
- <parameter name="browser" value="chrome" />
- 
- <classes>
- 
- <class name="MyTestCase.DemoTest" />
- 
- </classes>
- 
- </test>
- 
-</suite>
+<suite name="Suite" parallel="tests" thread-count="2">
+ <test name="FirefoxTest">
+  <parameter name="browser" value="FF"/>
+   <classes>
+    <class name="MyTestCase.DemoTest"/>
+     </classes>
+      </test>
+       <test name="ChromeTest">
+      <parameter name="browser" value="chrome"/>
+     <classes>
+    <class name="MyTestCase.DemoTest"/>
+   </classes>
+  </test>
+ </suite>

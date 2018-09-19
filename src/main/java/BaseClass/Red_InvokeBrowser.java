@@ -1,4 +1,6 @@
 package BaseClass;
+import java.io.File;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -31,10 +33,18 @@ import org.openqa.selenium.support.PageFactory;
 		
 		else if(browserName.equals("IE"))
 		{
-			System.setProperty("webdriver.ie.driver","C:\\Users\\VICKY\\Desktop\\IEDriverServer-64.exe");
-			driver = new InternetExplorerDriver();
-			driver.manage().window().maximize();
+			  //System.setProperty("webdriver.ie.driver","C:\\Users\\VICKY\\Desktop\\IEDriverServer-64.exe");
+			
+			  File IEDriver = new File("C:\\Users\\VICKY\\Desktop\\IEDriverServer-64.exe");
+			  System.setProperty("webdriver.ie.driver", IEDriver.getAbsolutePath() );   
+			  DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+			  capabilities.setCapability(InternetExplorerDriver.
+			  INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+			  driver = new InternetExplorerDriver(capabilities);
+			  
+			  //driver = new InternetExplorerDriver();
+			  //driver.manage().window().maximize();
 		}
 		return driver;		
 	    }
-       }
+        }

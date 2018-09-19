@@ -24,6 +24,8 @@ import WaitClass.Wait;
 	
 	@FindBy(xpath="//div[@class='user-login user-login-front pull-right']/a[text()='Login']") WebElement LoginButton;
 	
+	@FindBy(xpath="//div[@class='hd-rft']//div//a[2]") WebElement LoginButton2; 
+	
 	@FindBy(xpath="//div[@class='mn-wrp']//div//section//div//article//h1/small//div") WebElement Click_Claim_Button;
 	
 	@FindBy(xpath="//div[@id='claim_stat_msg']//p") WebElement ClaimErrorMsg;
@@ -72,7 +74,7 @@ import WaitClass.Wait;
 	
 	@FindBy(xpath="//a[@href='/cvrs-pending-claims']") WebElement PendingClaim; 
 	
-	@FindBy(xpath="//tr[@class='item-233704']//td[3]//a") WebElement Pending;
+	@FindBy(xpath="//div[@class='view-content']//div[1]//table//tbody//tr//td[3]//a[1]") WebElement Pending;
 	
 	@FindBy(xpath="//div[@id='popover-content-233704']//a[1]") WebElement REJECT;
 	
@@ -84,9 +86,11 @@ import WaitClass.Wait;
 	
 	@FindBy(xpath="//div[@id='claimApproved']//div//div//div[2]//button[2]") WebElement CancelButton1;
 	
-	@FindBy(xpath="//div[@id='popover-content-233704']//textarea") WebElement TextArea;
+	@FindBy(xpath="//div[@class='popover-content']//div//textarea") WebElement TextArea;
 	
-	@FindBy(xpath="//div[@id='popover-content-233704']//a[2]") WebElement Approve;
+	@FindBy(xpath="//div[@class='popover-content']//div//a[2]") WebElement Approve;
+	
+	@FindBy(xpath="//div[@id='claimApproved']//div//div//div[2]//button[1]") WebElement OK_Buton;
 	
 	public Non_LoggedIn_User_Test(WebDriver driver,ExtentTest test)
 	{

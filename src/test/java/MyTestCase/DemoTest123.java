@@ -13,9 +13,9 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+
 import BaseClass.Red_InvokeBrowser;
 import CommonClass.ExcelData;
-import CommonClass.WriteData;
 import ExecutionReport.Extent_Report;
 import ExecutionReport.ScreenShot;
 import PageClass.AdvancedSearch_Popup_Test;
@@ -30,7 +30,7 @@ import PageClass.ProduceIndex;
 import PageClass.RateCompany_Popup_Test;
 import PropertyClass.Property;
 
-public class DemoTest 
+public class DemoTest123 
 {
 	WebDriver driver;
 	String browser;
@@ -51,37 +51,22 @@ public class DemoTest
 	Claim_POP_UP_Test poppy;
 	ExcelData read;
 	Non_LoggedIn_User_Test pop;
-	WriteData sss;
 	
-	@Parameters("browser")
+	//@Parameters("browser")
 	
 	@BeforeMethod()
-	public void Setup(String browser) throws InterruptedException, IOException
+	public void Setup() throws InterruptedException, IOException
 	   {	   
-		if(browser.equals("FF")) 
-		{
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\VICKY\\Desktop\\geckodriver.exe");
-			driver=new FirefoxDriver();
-			driver.manage().window().maximize();
-		}
-		else if(browser.equals("chrome")) 
-		{
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\VICKY\\Desktop\\chromedriver.exe");
-			driver = new ChromeDriver(); 
-			driver.manage().window().maximize();			
-		}	
-		else if(browser.equals("IE"))
-		{
-			System.setProperty("webdriver.ie.driver","C:\\Users\\VICKY\\Desktop\\IEDriverServer-64.exe");
-			driver = new InternetExplorerDriver();
-			driver.manage().window().maximize();
-		}	
-		 driver.get("https://dev-redbook-pcl.pantheonsite.io/");
+		 browser=Property.getData("DATA", "browserName");
+		 url=Property.getData("DATA", "url"); 
+		 driver=Red_InvokeBrowser.openBrowser(browser); 
+		 driver.get(url); 
+		 //driver.get("https://dev-redbook-pcl.pantheonsite.io/");
 
 		 login=new Login_Test(driver, test,report); 
 		 rest=new RateCompany_Popup_Test(driver,test, report);
 		 advanced=new AdvancedSearch_Popup_Test(driver,test);
-		 PIN=new ProduceIndex(driver);
+		 PIN=new ProduceIndex(driver, test);
 		 Endorse=new Endorsement_Test(driver, test);
 		 pop=new Non_LoggedIn_User_Test(driver, test);
 		 financialSnap=new Financial_Snapshot_Popup_Test(driver, test, report);
@@ -89,7 +74,7 @@ public class DemoTest
 		 Submit=new Claim_Submit_Test(driver,test);
 		 sc=new ScreenShot(driver);
 	 	 contact=new Contact_Test(driver);
-	 	 read=new ExcelData(driver);
+	 	 read=new ExcelData();
 	  }
 	
 	@Test(priority=1)
